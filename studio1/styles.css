@@ -2,7 +2,6 @@ body {
     background-color: black;
 }
 
-
 @media only screen and (min-width: 600px) {
     body {
         background-color: black;
@@ -12,8 +11,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Adjust the height as needed */
-    
+        height: auto;
+        width: 50%;
         position: relative;
     }
     
