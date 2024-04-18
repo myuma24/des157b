@@ -48,9 +48,6 @@ video.switch{
 img {
     width: auto;
     height: 120px;
-    box-shadow: 5px white;
-    
-    transition: filter .3s ease-in-out;
 }
 
 button {
@@ -91,10 +88,10 @@ button:hover {
     font-size: 36px;
     color: antiquewhite;
     transform: translate(-50%, -50%);
-    animation: bird 2s infinite alternate ease-in-out;
+    animation: sun 2s infinite alternate ease-in-out;
 }
 
-@keyframes bird {
+@keyframes sun {
     0% {
       opacity: .5;
       transform: scale(1);
