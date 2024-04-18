@@ -64,4 +64,11 @@
             mode = 'dark'
         }
     });
+
+    const loading = document.querySelector('.fa-sun');
+
+    video.addEventListener('playing', function() {
+    loading.style.display = 'none';
+    });
+
 })();
