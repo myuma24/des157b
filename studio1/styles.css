@@ -1,53 +1,85 @@
 body {
     background-color: black;
+    overflow: hidden;
 }
 
-@media only screen and (min-width: 600px) {
-    body {
-        background-color: black;
-    }
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
     
-    .video-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: 50%;
-        position: relative;
-    }
+video {
+    width: 50%;
+    height: auto;
+    filter: grayscale(1);
     
-    video {
-        filter: grayscale(1);
-    }
+    transition: filter .3s ease-in-out;
+}
+
+video.switch{    
+    width: 50%;
+    height: auto;
+    filter: grayscale(0);
     
-    .galleryTop, .galleryBottom {
-        position: absolute;
-        z-index: 2;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        gap: 40px;
-    }
+    transition: filter .3s ease-in-out;
+}
+
+.galleryTop, .galleryBottom {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px;
+}
+
+.galleryTop {
+    top: 10%;
+}
+
+.galleryBottom {
+    bottom: 10%;
+}
+
+img {
+    width: auto;
+    height: 120px;
+    box-shadow: 5px white;
     
-    .galleryTop {
-        top: 220px;
-    }
-    
-    .galleryBottom {
-        bottom: 200px;
-    }
-    
-    img {
-        width: auto;
-        height: 125px;
-        filter: grayscale(1);
-        box-shadow: 5px white;
-        transition: filter .3s ease-in-out;
-    }
-    
-    img:hover {
-        filter: grayscale(0) drop-shadow(0px 0px 10px white);
-    }
-    
-    
+    transition: filter .3s ease-in-out;
+}
+
+button {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: #000000;
+}
+
+.hidden{ 
+    opacity:0;
+    transition: 1s;
+}
+
+.showing{
+    opacity:1;
+    transition: 1s;
 }
