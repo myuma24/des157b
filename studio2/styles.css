@@ -19,3 +19,8 @@ img {
     width: 500px;
     height: auto;
 }
+
+
+i { 
+    cursor: pointer;
+}
