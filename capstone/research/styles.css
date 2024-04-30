@@ -1,0 +1,25 @@
+
+body {
+    margin: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p, h1, a {
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    font-weight: 800;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

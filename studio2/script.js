@@ -1,7 +1,6 @@
 (function(){
     let globalData;
 
-    let currentTime = "9AM";
     const h1Element = document.querySelector('#coughDropsInfo');
     const leftIcon = document.querySelector('#leftIcon');
     const rightIcon = document.querySelector('#rightIcon');
@@ -9,14 +8,30 @@
     async function getData() {
         const coughDropData = await fetch('data/coughdrops.json');
         const data = await coughDropData.json();
-        /* console.log(data); */
+        console.log(data);
         globalData = data;
-        updateH1();
     }
 
+    function outputData(data){
 
+        for (let key in data){
+            console.log(key, data[key]);
+            /* h1Element.innerHTML = `I ate ${data[key]} coughdrops at ${key}`; */
+        }
+        return;
+    }
+    getData(); 
+
+
+
+
+
+
+
+
+/* 
     function updateH1() {
-        /* console.log(currentTime); */
+        console.log(currentTime);
         const currentCoughDrops = globalData[currentTime];
         h1Element.innerHTML = `At ${currentTime} I ate ${currentCoughDrops} cough drops.`;
     }
@@ -40,6 +55,6 @@
     });
     
     
-    getData();
+    getData(); */
     
 })();

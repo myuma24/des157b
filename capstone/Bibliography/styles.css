@@ -1,0 +1,12 @@
+body {
+    margin: 20%;
+    margin-top: 50px;
+    margin-bottom: unset;
+}
+
+p, h1 {
+    font-family: "Open Sans", sans-serif;
+}
+.description {
+    padding-left: 30px;
+}
