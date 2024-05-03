@@ -1,13 +1,42 @@
-[{
-    "9AM": 3,
-    "10AM": 4,
-    "11AM": 2,
-    "12PM": 2,
-    "1PM": 1,
-    "2PM": 2,
-    "3PM": 3,
-    "4PM": 4,
-    "5PM": 3,
-    "6PM": 2
+{
+    "point1" : {
+        "time" : "9:00AM",
+        "amount" : 3
+    },
+    "point2" : {
+        "time" : "10:00AM",
+        "amount" : 4
+    },
+    "point3" : {
+        "time" : "11:00AM",
+        "amount" : 2
+    },
+    "point4" : {
+        "time" : "12:00PM",
+        "amount" : 2
+    },
+    "point5" : {
+        "time" : "1:00PM",
+        "amount" : 1
+    },
+    "point6" : {
+        "time" : "2:00PM",
+        "amount" : 2
+    },
+    "point7" : {
+        "time" : "3:00PM",
+        "amount" : 1
+    },
+    "point8" : {
+        "time" : "4:00PM",
+        "amount" : 2
+    },
+    "point9" : {
+        "time" : "5:00PM",
+        "amount" : 3
+    },
+    "point10" : {
+        "time" : "6:00PM",
+        "amount" : 4
+    }
 }
-]
