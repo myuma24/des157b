@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change this H1</h1>
+
+    <p>This code was taken from my JS script for my portal page. I altered the original function to create a named function with toggleMode();, function expression with the variable toggleMode, then a arrow function. The function uses an event listener on a button, when a user clicks the button in will change the styling of the page to either light or dark.</p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+            function toggleMode() {
+                if (mode === 'dark') {
+                    body.className = 'switch';
+                    banner.className = 'switch';
+                    button.className = 'switch';
+                    header.className = 'switch';
+                    for (const section of sections) {
+                        section.className = 'switch';
+                    }
+                    mode = 'light';
+                } else {
+                    body.removeAttribute('class');
+                    banner.removeAttribute('class');
+                    button.removeAttribute('class');
+                    header.removeAttribute('class');
+                    for (const section of sections) {
+                        section.removeAttribute('class');
+                    }
+                    mode = 'dark';
+                }
+            }
+            
+            button.addEventListener('click', toggleMode);            
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            const toggleMode = function() {
+                if (mode === 'dark') {
+                    body.className = 'switch';
+                    banner.className = 'switch';
+                    button.className = 'switch';
+                    header.className = 'switch';
+                    for (const section of sections) {
+                        section.className = 'switch';
+                    }
+                    mode = 'light';
+                } else {
+                    body.removeAttribute('class');
+                    banner.removeAttribute('class');
+                    button.removeAttribute('class');
+                    header.removeAttribute('class');
+                    for (const section of sections) {
+                        section.removeAttribute('class');
+                    }
+                    mode = 'dark';
+                }
+            };
+            
+            button.addEventListener('click', toggleMode);
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            button.addEventListener('click', () => {
+                if (mode === 'dark') {
+                    body.className = 'switch';
+                    banner.className = 'switch';
+                    button.className = 'switch';
+                    header.className = 'switch';
+                    for (const section of sections) {
+                        section.className = 'switch';
+                    }
+                    mode = 'light';
+                } else {
+                    body.removeAttribute('class');
+                    banner.removeAttribute('class');
+                    button.removeAttribute('class');
+                    header.removeAttribute('class');
+                    for (const section of sections) {
+                        section.removeAttribute('class');
+                    }
+                    mode = 'dark';
+                }
+            });
+        </pre>
+    </code>
+
+    <footer> Your Name </footer>
+    
+</body>
+</html>
