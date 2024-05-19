@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- Normalize CSS for browser compatability -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+        <!-- Add link to any google fonts used here -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+        <!-- My Script -->
+        <script src="script.js" defer></script>
+    
+        <!-- My Styles -->
+        <link href="styles.css" rel="stylesheet">
+    
+        <!-- Meta tag for mobile support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+        <!-- Option 1: Include in HTML -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="title">What cleaning supply are you?</div>
+        <div class = "begin"><button>Begin</button></div>
+
+        <div id="question" class="question" style="display: none;"></div>
+
+        <label class="option" style="display: none;">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+        </label>
+
+        <label class="option" style="display: none;">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+        </label>
+
+        <!-- Buttons -->
+        <div class="controls" style="display: none;">
+            <i class="bi bi-caret-left-fill previous"></i>  
+            <i class="bi bi-caret-right-fill next"></i>
+        </div>
+    </div>
+
+    <div class="result"></div>
+    
+</body>
+</html>
