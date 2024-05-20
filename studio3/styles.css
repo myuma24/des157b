@@ -196,3 +196,13 @@ a {
     font-family: "Inter", sans-serif;
     font-weight: 800;
 }
+
+.titleFormat {
+    padding-left: 12%;
+}
+
+@media only screen and (max-width: 600px) {
+    .option-container {
+        flex-direction: column;
+    }
+}
