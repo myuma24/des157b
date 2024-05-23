@@ -1,0 +1,28 @@
+body {
+    margin: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p, h1, a, h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+li {
+    font-family: "Open Sans", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#tech {
+    display: flex;
+    flex-direction: column;
+}
