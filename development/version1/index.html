@@ -25,35 +25,321 @@
         <!-- Fonts -->
 
 </head>
+
 <body>
-    <div id = "mainInfo">
-        <p>
-            According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons.
-            Mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year, according to the American College Health Association's National College Health Assessment.
-            Student loan debt in the United States surpassed $1.7 trillion in 2021, with approximately 45 million borrowers, according to the Federal Reserve and the Department of Education.
-            In the United States, around 60% of undergraduate students graduate with some form of debt, according to data from the National Center for Education Statistics.
-            About 43% of full-time undergraduate students in the United States work while enrolled in college, according to the National Center for Education Statistics.
-            The federal minimum wage for covered nonexempt employees is $7.25 per hour.
-            The average annual cost of tuition and fees for in-state students at public four-year institutions in the United States was $10,560 for the 2020-2021 academic year, according to the College Board.
-            According to the College Board, students can expect to spend around $2,932 a month (or $26,390 for a nine-month period) on living expense. The average costs for housing alone is between $1,360 to $2,649 per month.
-            Let’s simplify the maths, if you were to work a $15.50 minimum wage job while attending college, your monthly paycheck will amount to $__ and 30% of that paycheck will go to towards rent.
-        </p>
-        <p>This is Your Life as a College Student</p>
-    </div>
+    <main>
+        <div id = "dataBar">Money: $1920</div>
+        <div id = "dataBarINFO">
+            Your starting money is your salary doubled. 
+        </div>
 
-    </div>
-    <header>
-        <div class="money">Money: $<span id="money">400</span></div>
-    </header>
-    <section>
-        
-    </section>
-    <div class="game">
-        
-        <div class="scenario" id="scenario"></div>
-        <div class="options" id="options"></div>
-    </div>
+        <section id = "begin">
 
-    <script src="game.js"></script>
+        </section>
+
+        <section id = "scene1">
+            <h1>Monday Day 1</h1>
+            <p>
+                This is you: Young, single, and no children living in good ol’ sunny California.<br>
+
+                You’re a full-time college student with a part-time job that pays $15 per hour. This is California's minimum wage.<br> 
+                
+                You live in a small studio apartment. The average cost for housing alone in California is between $1,360 to $2,649 per month and you feel extremely lucky you were able to get your own place for only $700 a month. Even if it's only a couple of square meters and it is a bit far from campus.<br>
+                <button>Suddenly your phone rings</button>
+            </p>
+            <p>
+                You have a new notification: Electric Bill<br>
+                Total to be paid by the end of the month: $90<br>
+                The average electric bill for a 1 bedroom apartment in California is likely to be $138 per month but you are good at saving electricity so your electric bill is lower than the average.<br>
+                
+                You can pay this bill <button id = "scene1op1">immediately</button>  or <button id = "scene1op2">delay it</button>for two weeks and get a reminder for it later.<br>
+            </p>
+            <p>
+                You decide to pay this bill immediately.<br>
+                
+                Tomorrow you have class so you  <button>go to bed early</button>.
+            </p>
+            <p>
+                You set a reminder to pay it at the end of the month.<br>
+                
+                Tomorrow you have class so you  <button>go to bed early</button>.
+            </p>
+        </section>
+            
+        <section id = "scene2">
+            <h1>Tuesday Day 2</h1>
+            <p>
+                This is your college classroom and you just finished attending your last lecture. You’re very tired and want to take the bus home but are behind on some assignments. Do you <button>stay behind and finish up your work</button> or <button>head home early</button> ?
+            </p>
+            <p>
+                The assignment took longer than you thought, but you have some free time tomorrow. You go ahead and take the bus home.
+
+                <button>Tomorrow will be a better day</button> 
+            </p>
+            <p>
+                You decide to postpone your assignment and head home to rest early.
+
+                <button>Tomorrow will be a better day</button>
+            </p>
+        </section>
+
+        <section id = "scene3V1">
+            <h1>Wednesday Day 3</h1>
+            <p>
+                Today you have fewer classes. Because you were so tired yesterday you forgot to pack lunch. Your classmates invite you to go have lunch with them. You know socializing will benefit your mental health but you’re still behind on assignments. 
+            </p>
+            <p>
+                According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons. According to the American College Health Association's National College Health Assessment, mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year.
+            </p>
+            <p>
+                You decline their offer to finish your assignment, you’ll eat something once you arrive home. You have to get back to doing your work. You cannot wait until you can go home to eat something and rest.
+            </p>
+        </section>
+
+        <section id = "scene3V2">
+            <h1>Wednesday Day 3</h1>
+            <p>
+                Today you have fewer classes. Because you were so tired yesterday you forgot to pack lunch. Your classmates invite you to go have lunch with them. You know socializing will be good for your mental health.
+            </p>
+            <p>
+                According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons. According to the American College Health Association's National College Health Assessment, mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year.
+            </p>
+            <p>
+                Eating out will cost you $20, an alternative would be to buy yourself a sandwich for $8 at the market or wait and eat something at home.
+            </p>
+            <p>
+                After eating your sandwich you head to the rest of your classes. You cannot wait to go home and rest. 
+            </p>
+            <p>
+                You decline eating out with your friends, while disappointed they understand. You end the day and head home.
+            </p>
+            <p>
+                You enjoy a nice meal with your friends. You haven't thought about tipping along with the cost of the meal, so you spent $23 in total. At least you feel rejuvenated. You go home and rest.
+            </p>
+        </section>
+
+        <section id = "scene4">
+            <h1>
+                Thursday Day 4
+            </h1>
+            <p>
+                Today was a busier day but you returned home from your classes. 
+
+                You remember to prepare lunch but realize you're out of food for the week, so you decide to go to the supermarket to buy groceries. You pick only the necessities until you spot your favorite snack. You haven’t had it in a very long time and it only costs $6, however, what you're carrying for the week already costs $60. 
+                
+                On average, groceries cost between $290 and $548 per month for one person. If we divide $290 by four, you get about $72.50 per week.
+                
+                Do you <button>buy the snack</button> or <button>only what you need? </button>
+
+                You're back home. You leave your lunch ready for tomorrow and go to bed.
+            </p>
+        </section>
+
+        <section id = "scene5">
+            <h1>Friday Day 5</h1>
+            <p>
+                Today is Friday, and while you don’t have classes on Friday, you do have work. According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours.
+
+                You work on Fridays and Saturdays for 8 hours each day and get paid at the end of the month. Totaling 16 hours per week and a $960 paycheck.
+
+                After finishing your shift you return home. <button>Tomorrow is the weekend.</button>  
+            </p>
+        </section>
+
+        <section id = "scene6">
+            <h1></h1>
+            <p>
+                You wake up and repeat what you did yesterday. You return home to have dinner. 
+
+                While having dinner you get a text from your childhood friend. 
+
+                Hey, I’m thinking of having a get-together for my birthday tomorrow! Should you attend?
+                Attend and bring a gift ($30)
+                Attend and get a small gift ($10)
+                Attend without a gift.
+                Decline and say you can’t make it. 
+            </p>
+        </section>
+
+        <section id = "scene7">
+            <h1>Sunday Day 7</h1>
+            <p>
+                You declined your friend's invitation and said you were busy. Your friend is disappointed but they understand. You don’t have anything else planned today so you stay home and study. 
+            </p>
+            <p>
+                You arrive at the event. After having a tough week, you feel much better after seeing your friends. It’s getting late and you’re getting extremely tired. Should you leave early and take the transit bus or stay a bit longer and get a ride home?
+                Get a Uber (-$10)
+                Stay longer and get a ride home.
+            </p>
+            <p>
+                You arrive home.
+
+                Suddenly, you get a notification. “Your mobile plan is about to expire. Remember you can top up online or at any of our offices.”
+
+                $10 is the cheapest mobile plan you could find with good minutes and data. 
+
+                After renewing your mobile plan you decide to work on some homework until you get sleepy.
+                Tomorrow is Monday and you need to rest.
+            </p>
+        </section>
+
+        <section id = "scene8">
+            <h1>Monday Day 8</h1>
+            <p>
+                The week starts. Luckily, today wasn't as heavy as last week, but you notice some of your classmates are coughing and sneezing a lot.
+
+                You keep working until the time to leave arrives, and remember you should try to pass by the supermarket.
+                
+                At the supermarket you buy the same stuff you always do, stuff that's easy and fast to cook, so you don't have to spend too much time preparing your lunch every day.
+                
+                You buy more than you usually do in an attempt to avoid having to go back to the supermarket for a couple of days.
+                
+                You go to the cashier and the bill is $70 in total. It's more than what you expected, but there isn't anything you could take out. You proceed to pay and go home and rest.
+                </p>
+        </section>
+        <section id = "scene9">
+            <h1>Tuesday Day 9</h1>
+            <p>
+                Today is Tuesday many of your classmates are still out sick.
+                You try to be careful not to catch something. You fear that if you get sick you might have to stay in bed and you’ll struggle trying to makeup school work.
+                
+                You keep working for the rest of the day without socializing that much until it's time to leave.
+                
+                On your way home you saw many people sneezing and coughing. You hope you don’t catch anything. 
+                
+                After you get home, you go straight to your bed.
+                </p>
+        </section>
+        <section id = "scene10">
+            <h1>Wednesday Day 10</h1>
+            <p>
+                Your alarm rings. You feel like death. You feel weak, your head hurts, and your eyesight is fuzzy. You wonder if you caught the same thing your classmates have, or if it's just from exhaustion.
+
+                You think that maybe it might be a good idea to stay in bed today, but you know that it will affect your grades. On the other hand, if you go to a doctor you will have to co-pay $100 for an appointment and extra for the cost of medication. You get health insurance from your tuition but it unfortunately does not cover everything. What will you do
+            </p>
+            <p>
+                Go to class anyway.
+                A few hours after you arrive, your coughing gets worse and one of your Professors notices. They advise you not to come to the class until you get better and to go see a doctor. You pick up your stuff and go back home.
+                You feel worse by the minute. Maybe it would be a good idea to visit the doctor.
+
+                Go see a doctor (-$100).
+                With a bit of difficulty, you made it to the doctor's office. You've been sweating and coughing a lot. Your headache is worse.
+                The doctor takes your temperature and sees you're a little feverish. He indicates to rest in bed for today and tomorrow. He gives you a prescription for cough syrup and painkillers.
+                You ask if you have to buy the medicine and he insists that it will make you feel a lot better and recover quickly.
+                Go to the pharmacy
+
+                Rest in bed.
+                You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe.
+                Maybe it would be a good idea to make a doctor's appointment
+
+                You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, your total bill is $30. You pay for the medicine and go back home to rest.
+
+                You take your cough syrup and painkillers. The doctor told you to stay in bed tomorrow, but for the day after tomorrow, you should be better.
+            </p>
+        </section>
+        <section id = "scene11">
+            <h1>Thursday Day 11</h1>
+            <p>
+                Today you need to rest in bed once again, but at least you feel a little better than yesterday.
+
+                Suddenly you hear a notification from your phone. 
+                
+                “Dear tenants, here's a copy of this month's utilities.”
+                
+                You review the document and see that your expenses this month is $20. It's the same amount you pay each month.
+                
+                You decide to pay it immediately and keep resting for the rest of the day.
+            </p>
+        </section>
+        <section id = "scene12">
+            <h1>Friday Day 12</h1>
+            <p>
+                Today you go to work. You’re still feeling a bit weak but you can’t afford to rest for any more days. You're already worried about skipping class for 2 days, and you're unsure if there will be a chance to make up for those days.
+
+                While you're focused on working, you notice that there's a notification on your phone.
+                "New Notification Water Bill.
+                Total to be paid: $45"
+                
+                California's average water bills are the second highest in the US at $77 a month but you’re good at conserving water and only pay $45.
+                
+                You proceed to make the transfer and put your phone away.
+                
+                You spend the rest of the day relaxing until you fall asleep.
+                </p>
+        </section>
+        <section id = "scene13">
+            <h1>Saturday Day 13</h1>
+            <p></p>
+        </section>
+        <section id = "scene14">
+            <h1>Sunday Day 14</h1>
+            <p></p>
+        </section>
+        <section id = "scene15">
+            <h1>Monday Day 15</h1>
+            <p></p>
+        </section>
+        <section id = "scene16">
+            <h1>Tuesday Day 16</h1>
+            <p></p>
+        </section>
+        <section id = "scene17">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene18">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene19">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene20">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene21">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene22">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene23">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene24">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene25">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene26">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene27">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene28">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene29">
+            <h1></h1>
+            <p></p>
+        </section>
+        <section id = "scene30">
+            <h1></h1>
+            <p></p>
+        </section>
+    </main>
+
 </body>
 </html>
