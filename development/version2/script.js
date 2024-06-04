@@ -5,11 +5,11 @@
     let grades = 90;
     let isReminderSet = false;
 
-    alert(` Play through the days making not on your choices and finish through the 25 days. Try and maintain your money as best as possible. 
+/*     alert(` Play through the days making not on your choices and finish through the 25 days. Try and maintain your money as best as possible. 
 
     Play through the days and choose the most expensive options. 
     
-    Play through the days and choose the options that would most likely to affect your health. `);
+    Play through the days and choose the options that would most likely to affect your health. `); */
 
 
     function updateMoney(){
@@ -330,14 +330,14 @@
 
     });
     document.getElementById('scene15Lunch').addEventListener('click', function(){
-        alert("You've finished the testing prototype, thank you!");
+        /* alert("You've finished the testing prototype, thank you!"); */
         document.getElementById('').style.display = 'block';
         document.getElementById('').style.display = 'none';
 
     });
 
     document.getElementById('scene15Assignments').addEventListener('click', function(){
-        alert("You've finished the testing prototype, thank you!");
+        /* alert("You've finished the testing prototype, thank you!"); */
     });
 
 
