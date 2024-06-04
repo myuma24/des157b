@@ -218,38 +218,34 @@
         </section>
         <section id = "scene10" style="display: none;">
             <h1>Wednesday Day 10</h1>
-            <p id = "">
+            <p id = "scene10Prompt">
                 Your alarm rings. You feel like death. You feel weak, your head hurts, and your eyesight is fuzzy. You wonder if you caught the same thing your classmates have.
 
-                You think that maybe it might be a good idea to stay in bed today, but you know that it will affect your grades. On the other hand, if you go to a doctor you will have to co-pay $100 and extra for the cost of medication. You get health insurance from your tuition but it unfortunately does not cover everything. What will you do?<br><button>Go to class anyway.</button><br><button>Rest in bed.</button><br><button>Go see a doctor (-$100).</button><br>
+                You think that maybe it might be a good idea to stay in bed today, but you know that it will affect your grades. On the other hand, if you go to a doctor you will have to co-pay $100 and extra for the cost of medication. You get health insurance from your tuition but it unfortunately does not cover everything. What will you do?<br><button id = "scene10Class">Go to class anyway.</button><br><button id = "scene10Rest">Rest in bed.</button><br><button id = "scene10Doctor">Go see a doctor (-$100).</button><br>
             </p>
-
-                <p>
+            
+                <p id = "scene10ClassOpt" style="display: none;">
                     A few hours after you arrive, your coughing gets worse and one of your Professors notices. They advise you not to come to the class until you get better and to go see a doctor. You pick up your stuff and go back home.
-                    You feel worse by the minute. Maybe it would be a good idea to <button>visit the doctor</button>.
+                    You feel worse by the minute. Maybe it would be a good idea to <button class = "VisitDoc">visit the doctor</button>.
                 </p>
-                <p>
+                <p id = "scene10DocOpt"style="display: none;">
                     With a bit of difficulty, you made it to the doctor's office. You've been sweating and coughing a lot. Your headache is worse.
                     The doctor takes your temperature and sees you're a little feverish. He indicates to rest in bed for today and tomorrow. He gives you a prescription for cough syrup and painkillers.
                     You ask if you have to buy the medicine and he insists that it will make you feel a lot better and recover quickly.
-                    <button>Go to the pharmacy</button>
+                    <button class = "pharmacyOpt">Go to the pharmacy</button>
+                </p>
+                
+                <p id = "scene10BedOpt" style="display: none;">
+                    You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe. Maybe it would be a good idea to <button class = "VisitDoc">visit the doctors.</button>
                 </p>
                 
 
-                
-                <p>
-                    You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe. Maybe it would be a good idea to <button>visit the doctors.</button>
-                </p>
-                
+                <p id = "pharmacy" style = "display: none;">
+                    You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, your total bill is $30. You pay for the medicine and go back home to rest. <br>
 
-                <p>
-                    You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, your total bill is $30. You pay for the medicine and <button>go back home to rest.</button>
+                    The doctor told you to stay in bed tomorrow, you should be better in two days. 
+                <button id = "scene10Cont">Continue</button>
                 </p>
-
-            <p>
-                You take your cough syrup and painkillers. The doctor told you to stay in bed tomorrow, you should be better in two days. 
-                <button>Continue</button>
-            </p>
         </section>
         <section id = "scene11" style="display: none;">
             <h1>Thursday Day 11</h1>
@@ -262,7 +258,7 @@
                 
                 You review the document and see that your expenses this month is $20. It's the same amount you pay each month.
                 
-                <button>You pay the bill</button> and keep resting for the rest of the day.
+                <button id = "scene11Cont">You pay the bill</button> and keep resting for the rest of the day.
             </p>
         </section>
         <section id = "scene12" style="display: none;">
@@ -278,49 +274,56 @@
                 
                 You proceed to make the transfer and put your phone away.
                 
-                You spend the rest of the day relaxing until you <button>fall asleep</button>.
+                You spend the rest of the day relaxing until you <button id = "scene12Cont">fall asleep</button>.
                 </p>
         </section>
         <section id = "scene13" style="display: none;">
             <h1>Saturday Day 13</h1>
-            <p id = "">
+            <p id = "scene13p1" >
                 Today while getting ready for work, you realize that there are almost no clean clothes for the next week. You don't have a washing machine in your apartment, so you need to go to the laundromat after work.
 
-                You buy a token for the washing machine and another for the drying machine, <button>spending $4.00 in total</button>. 
-                
-                Once you're home you notice you have a missed call from your mom. You decide to <button>call her back</button>.
-                
-                Your mother answers and she asks how you've been and if you need anything. You tell her you’re doing well to not worry her. After a few minutes, she asks you if you would come by for lunch tomorrow. Even though you're tired, you tell her you will visit tomorrow.
-                </p>
+                You buy a token for the washing machine and another for the drying machine, <button id = "scene13$">spending $4.00 in total</button>. 
+            </p>
+            <p id = "scene13p2" style="display: none;">           
+                Once you're home you notice you have a missed call from your mom. You decide to <button id = "scene13Call">call her back</button>.
+            </p>
+            <p id = "scene13CallBack" style = "display: none;">                
+                Your mother answers and she asks how you've been and if you need anything. You tell her you’re doing well to not worry her. After a few minutes, she asks you if you would come by for lunch tomorrow. Even though you're tired, you tell her  <button id = "scene13Visit">you will visit tomorrow</button>.
+            </p>
         </section>
         <section id = "scene14" style="display: none;">
             <h1>Sunday Day 14</h1>
-            <p id = "">
-                You arrive at your mom's house. As always, your mom welcomes you with delicious food, made with a lot of effort. You both have a <button>good talk for a while.</button>
-
+            <p id = "Tscene14Talking">
+                You arrive at your mom's house. As always, your mom welcomes you with delicious food, made with a lot of effort. You both have a <button id = "scene14Talk">good talk for a while.</button>              
+            </p>
+            <p id = "scene14P1" style="display: none;">
                 After you're done eating, you insist on helping clean up, you know she's tired too.
                 
-                While you're getting ready to go back home, your mom takes out her purse. She hands you a $100.00 bill. She says "It might not be much, but I hope it helps you". You know that this is a big sacrifice for her, considering her own circumstances. Do you <button>take the bill</button> or do you <button>tell her that it's not necessary</button>?
-                
-                You thank your mother but tell her you're okay. If you ever need help you will tell her. She gives you a big hug and you <button>go back home</button>.
-                
-                Feeling a little guilty but you take the bill and thank your mother. You need it, and it's so nice to know she worries about you. She feels relieved for having helped you out. You give her a big hug and you <button>go back home</button>.
-                
-                You take the bus home. While it’s free for students, it was a long bus ride. After more than an hour, you're back home. You make your lunch for tomorrow and <button>go to sleep</button>.                
+                While you're getting ready to go back home, your mom takes out her purse. She hands you a $100.00 bill. She says "It might not be much, but I hope it helps you". You know that this is a big sacrifice for her, considering her own circumstances. Do you <button  id = "scene14TakeBill">take the bill</button> or do you <button id = "scene14DeclineBill">tell her that it's not necessary</button>?
+            </p>
+            <p id = "scene14P1v1" style="display: none;">
+                Feeling a little guilty but you take the bill and thank your mother. You need it, and it's so nice to know she worries about you. She feels relieved for having helped you out. You give her a big hug and you <button class = "scene14Home">go back home</button>.
+            </p>
+            <p id = "scene14P1v2" style="display: none;">
+                You thank your mother but tell her you're okay. If you ever need help you will tell her. She gives you a big hug and you <button class = "scene14Home">go back home</button>.
+            </p>
+            <p id = "scene14P1v2" style="display: none;">
+                You take the bus home. While it’s free for students, it was a long bus ride. After more than an hour, you're back home. You make your lunch for tomorrow and <button id = "scene14Cont">go to sleep</button>.  
             </p>
         </section>
 
         <section id = "scene15" style="display: none;">
             <h1>Monday Day 15</h1>
+            <p id = "scene15Intro">
+                
+            </p>
             <p id = "">
-                You're halfway through the month. You still have ${money} and in less than two weeks you have to pay rent.
-
                 In 15 more days, you'll be paid $960.00.
                 
                 You then get a notification on your phone. You have a text from one of your friends, “Do you want to get lunch with me tomorrow after class? My treat!”
                 
-                You contemplate the question. You’ll get a free meal but you are unsure how long you’ll be staying out and how you’ll get home. You also have quite a lot of assignments piled up thanks to the illness you caught a few days ago. Should you push them to the side and <button>get lunch with your friend</button> or <button>work on your assignments</button>? 
-                </p>
+                You contemplate the question. You’ll get a free meal but you are unsure how long you’ll be staying out and how you’ll get home. You also have quite a lot of assignments piled up thanks to the illness you caught a few days ago. Should you push them to the side and <button id = "scene15Lunch">get lunch with your friend</button> or <button id = "scene15Assignments">work on your assignments</button>? 
+            </p>
         </section>
         <section id = "scene16" style="display: none;">
             <h1>Tuesday Day 16</h1>

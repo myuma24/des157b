@@ -5,6 +5,12 @@
     let grades = 90;
     let isReminderSet = false;
 
+    alert(` Play through the days making not on your choices and finish through the 25 days. Try and maintain your money as best as possible. 
+
+    Play through the days and choose the most expensive options. 
+    
+    Play through the days and choose the options that would most likely to affect your health. `);
+
 
     function updateMoney(){
         document.getElementById('MoneyCount').innerHTML = `Money: $${money}`;
@@ -205,41 +211,135 @@
 
     });
 
-    document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
+    document.getElementById('scene10Class').addEventListener('click', function(){
+        document.getElementById('scene10ClassOpt').style.display = 'block';
+        document.getElementById('scene10Class').style.display = 'none';
 
     });
     
-    document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
+    document.getElementById('scene10Rest').addEventListener('click', function(){
+        document.getElementById('scene10BedOpt').style.display = 'block';
+        document.getElementById('scene10Class').style.display = 'none';
 
     });
 
-    document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
+    document.getElementById('scene10Doctor').addEventListener('click', function(){
+        money -= 100;
+        updateMoney();
+        document.getElementById('scene10DocOpt').style.display = 'block';
+        document.getElementById('scene10Class').style.display = 'none';
+
+    });
+
+    var doctor = document.getElementsByClassName('VisitDoc');
+    for (var i = 0; i < doctor.length; i++) {
+        doctor[i].addEventListener('click', function() {
+            money -= 100;
+            document.getElementById('scene10ClassOpt').style.display = 'none';
+            document.getElementById('scene10DocOpt').style.display = 'none';
+            document.getElementById('scene10BedOpt').style.display = 'none';
+            document.getElementById('pharmacy').style.display = 'block';
+        });
+    }
+
+    document.getElementById('pharmacyOpt').addEventListener('click', function(){
+        money -= 100;
+        updateMoney();
+        document.getElementById('pharmacy').style.display = 'block';
+        document.getElementById('scene10DocOpt').style.display = 'none';
+
+    });
+
+
+    
+    document.getElementById('scene10Cont').addEventListener('click', function(){
+        money -= 30;
+        updateMoney();
+        document.getElementById('scene11').style.display = 'block';
+        document.getElementById('scene10').style.display = 'none';
+
+    });
+
+    document.getElementById('scene11Cont').addEventListener('click', function(){
+        money -= 20;
+        updateMoney();
+        document.getElementById('scene12').style.display = 'block';
+        document.getElementById('scene11').style.display = 'none';
 
     });
     
-    document.getElementById('').addEventListener('click', function(){
+    document.getElementById('scene12Cont').addEventListener('click', function(){
+        document.getElementById('scene13').style.display = 'block';
+        document.getElementById('scene12').style.display = 'none';
+
+    });
+
+    document.getElementById('scene13$').addEventListener('click', function(){
+        money -= 4;
+        updateMoney();
+        document.getElementById('scene13p2').style.display = 'block';
+        document.getElementById('scene13p1').style.display = 'none';
+
+    });
+
+    document.getElementById('scene13Call').addEventListener('click', function(){
+        document.getElementById('scene13CallBack').style.display = 'block';
+        document.getElementById('scene13p2').style.display = 'none';
+
+    });
+
+    document.getElementById('scene13Visit').addEventListener('click', function(){
+        document.getElementById('scene14').style.display = 'block';
+        document.getElementById('scene13').style.display = 'none';
+
+    });
+
+    document.getElementById('scene14Talk').addEventListener('click', function(){
+        document.getElementById('scene14P1').style.display = 'block';
+        document.getElementById('Tscene14Talking').style.display = 'none';
+
+    });
+
+    document.getElementById('scene14TakeBill').addEventListener('click', function(){
+        money += 100;
+        updateMoney();
+        document.getElementById('scene14P1v1').style.display = 'block';
+        document.getElementById('scene14P1').style.display = 'none';
+
+    });
+    document.getElementById('scene14DeclineBill').addEventListener('click', function(){
+        document.getElementById('scene14P1v2').style.display = 'block';
+        document.getElementById('scene14P1').style.display = 'none';
+
+    });
+
+    var scene14 = document.getElementsByClassName('scene14Home');
+    for (var i = 0; i < doctor.length; i++) {
+        doctor[i].addEventListener('click', function() {
+            money -= 100;
+            document.getElementById('scene14P1v2').style.display = 'none';
+            document.getElementById('scene14P1v1').style.display = 'none';
+            document.getElementById('scene14P1v2').style.display = 'block';
+        });
+    }
+
+    document.getElementById('scene14Cont').addEventListener('click', function(){
+        document.getElementById('scene15').style.display = 'block';
+        document.getElementById('scene15Intro').innerHTML = `You're halfway through the month. You still have ${money} and in less than two weeks you have to pay rent.;`
+        document.getElementById('scene14').style.display = 'none';
+
+    });
+    document.getElementById('scene15Lunch').addEventListener('click', function(){
+        alert("You've finished the testing prototype, thank you!");
         document.getElementById('').style.display = 'block';
         document.getElementById('').style.display = 'none';
 
     });
 
-    document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
-
+    document.getElementById('scene15Assignments').addEventListener('click', function(){
+        alert("You've finished the testing prototype, thank you!");
     });
-    
-    document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
 
-    });
 
 
 
