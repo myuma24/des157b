@@ -1,5 +1,18 @@
+Main {
+    margin: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+main {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+}
+
 span {
     color: blueviolet;
-    font-weight: 900;
+    font-weight: 1000;
     cursor: pointer;
 }

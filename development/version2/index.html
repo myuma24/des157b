@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30 Days as a College Student</title>
+    <title>25 Days as a College Student</title>
 
         <!-- Normalize CSS for browser compatability -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
@@ -23,70 +23,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <main>
-        <section id = "begin">
+        <section id = "beginMain">
             <h1>25 Days as a College Student</h1>
-            <button>Begin</button>
+            <button id = "begin">Begin</button>
         </section>
 
         <div id = "dataBar" style="display: none;">
             <span id = "MoneyCount">Money: $1920</span>
             <div id = "dataBarINFO">
-                This amount is decided on your part-time salary times two.
+                This amount is decided on your part-time salary multiplied by two.
             </div>
         </div>
 
         <section id = "scene1" style="display: none;">
             <h1>Monday Day 1</h1>
-            <p id = "">
+            <p id = "scene1Part1">
                 This is you: Young, single, and no children living in good ol’ sunny California.<br>
 
                 You’re a full-time college student with a part-time job that pays $15 per hour. This is California's minimum wage.<br> 
                 
-                You live in a small studio apartment. The average cost for housing alone in California is between $1,360 to $2,649 per month and you feel extremely lucky you were able to get your own place for only $700 a month. Even if it's only a couple of square meters and it is a bit far from campus.<br>
-                <button>Suddenly your phone rings</button>
+                You live in a small studio apartment. The average cost for housing alone in California is between $1,360 to $2,649 per month and you feel extremely lucky you were able to get your own place for only $700 a month. Even if it's only a couple of square meters and it is a bit far from campus.
+                <button id = "scene1Phonering">Suddenly your phone rings</button>
             </p>
-            <p id = "">
+            <p id = "scene1Part2" style="display: none;">
                 You have a new notification: <span>Electric Bill</span><br>
                 Total to be paid by the end of the month: $90<br>
                 The average electric bill for a 1 bedroom apartment in California is likely to be $138 per month but you are good at saving electricity so your electric bill is lower than the average.<br>
                 
-                You can pay this bill <button id = "scene1op1">immediately</button>  or <button id = "scene1op2">delay it</button>for two weeks and get a reminder for it later.<br>
+                You can pay this bill <button id = "scene1op1">immediately</button>  or <button id = "scene1op2">delay it</button> for two weeks and get a reminder for it later.<br>
             </p>
-            <p id = "">
+            <p id = "op1" style="display: none;">
                 You decide to pay this bill immediately.<br>
                 
-                Tomorrow you have class so you  <button>go to bed early</button>.
+                Tomorrow you have class so you  <button class = "Scene1Continue">go to bed early</button>.
             </p>
-            <p id = "">
-                You set a reminder to pay it at the end of the month.<br>
+            <p id = "op2" style="display: none;">
+                You set a reminder to pay it in two weeks.<br>
                 
-                Tomorrow you have class so you  <button>go to bed early</button>.
+                Tomorrow you have class so you  <button class = "Scene1Continue">go to bed early</button>.
             </p>
         </section>
             
         <section id = "scene2" style="display: none;">
             <h1>Tuesday Day 2</h1>
-            <p id = "">
-                This is your college classroom and you just finished attending your last lecture. You’re very tired and want to take the bus home but you're behind on some assignments. Do you <button>stay behind and finish up your work</button> or <button>head home early</button> ?
+            <p id = "scene2Part1">
+                This is your college classroom and you just finished attending your last lecture. You’re very tired and want to take the bus home but you're behind on some assignments. Do you <button id = "scene2op1">stay behind and finish up your work</button> or <button  id = "scene2op2">head home early</button> ?
             </p>
-            <p id = "">
+            <p id = "2op1" style="display: none;">
                 The assignment took longer than you thought, but you have some free time tomorrow. You go ahead and take the bus home.
 
-                <button>Tomorrow will be a better day</button> 
+                <button id = "2Next1">Tomorrow will be a better day</button> 
             </p>
-            <p id = "">
+            <p id = "2op2" style="display: none;">
                 You decide to postpone your assignment and head home to rest early.
 
-                <button>Tomorrow will be a better day</button>
+                <button id = "2Next2">Tomorrow will be a better day</button>
             </p>
         </section>
 
-        <section id = "scene3V1" style="display: none;">
+        <section id = "scene3V2" style="display: none;">
             <h1>Wednesday Day 3</h1>
             <p id = "">
                 Today you have fewer classes. Because you were so tired yesterday you forgot to pack lunch. Your classmates invite you to go have lunch with them. You know socializing will benefit your <span>mental health</span> but you’re still behind on assignments. 
@@ -95,29 +98,29 @@
                 According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons. According to the American College Health Association's National College Health Assessment, mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year.
             </p>
             <p id = "">
-                You decline their offer to finish your assignment, you’ll eat something once you arrive home. You have to get back to doing your work. You cannot wait until you can go home to eat something and rest. <button>Continue</button>
+                You decline their offer to finish your assignment, you’ll eat something once you arrive home. You have to get back to doing your work. You cannot wait until you can go home to eat something and rest. <button class = "scene3Cont">Continue</button>
             </p>
         </section>
 
-        <section id = "scene3V2" style="display: none;">
+        <section id = "scene3V1" style="display: none;">
             <h1>Wednesday Day 3</h1>
-            <p id = "">
+            <p id = "scene3Text">
                 Today you have fewer classes. Because you were so tired yesterday you forgot to pack lunch. Your classmates invite you to go have lunch with them. You know socializing will be good for your <span>mental health</span>.
             </p>
-            <p id = "">
+            <p id = "scene3Text2">
                 According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons. According to the American College Health Association's National College Health Assessment, mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year.
             </p>
-            <p id = "">
-                <button>Eating out</button> will cost you $20, an alternative would be to <button>buy yourself a sandwich</button>  for $8 at the market or wait and <button> eat something at home</button>.
+            <p id = "scene3Choices">
+                <button id = "scene3Eatout">Eating out</button> will cost you $20, an alternative would be to <button id = "scene3Sandwhich">buy yourself a sandwich</button>  for $8 at the market or wait and <button id = "scene3Decline"> eat something at home</button>.
             </p>
-            <p id = "">
-                After eating your sandwich you head to the rest of your classes. You cannot wait to <button>go home and rest</button>. 
+            <p id = "scene3Sandwhich1" style="display: none;">
+                After eating your sandwich you head to the rest of your classes. You cannot wait to <button class = "scene3Cont">go home and rest</button>. 
             </p>
-            <p id = "">
-                You decline eating out with your friends, while disappointed they understand. You end the day and <button>head home</button>.
+            <p id = "scene3Decline1" style="display: none;">
+                You decline eating out with your friends, while disappointed they understand. You end the day and <button class = "scene3Cont">head home</button>.
             </p>
-            <p id = "">
-                You enjoy a nice meal with your friends. You haven't thought about tipping along with the cost of the meal, so you spent $23 in total. At least you feel rejuvenated. You <button>go home and rest</button>.
+            <p id = "scene3Eatout1" style="display: none;">
+                You enjoy a nice meal with your friends. You haven't thought about tipping along with the cost of the meal, so you spent $23 in total. At least you feel rejuvenated. You <button class = "scene3Cont">go home and rest</button>.
             </p>
         </section>
 
@@ -125,63 +128,64 @@
             <h1>
                 Thursday Day 4
             </h1>
-            <p  id = "">
+            <p  id = "scene4Text">
                 Today was a busier day but you returned home from your classes. 
 
                 You remember to prepare lunch but realize you're out of food for the week, so you decide to go to the supermarket to buy groceries. You pick only the necessities until you spot your favorite snack. You haven’t had it in a very long time and it only costs $6, however, what you're currently carrying already costs <span>$60</span> . 
                 
-                On average, groceries cost between $290 and $548 per month for one person. If we divide $290 by four, you get about $72.50 per week.
+                On average, groceries cost between $290 to $548 per month for one person. If we divide $290 by four, you get about $72.50 per week.
                 
-                Do you <button>buy the snack</button> or <button>only what you need?</button>
-
-                You're back home. You leave your lunch ready for tomorrow and go to bed.
+                Do you <button id = "buySnack">buy the snack</button> or <button id = "DontbuySnack">only what you need?</button>
+            </p>
+            <p id = "scene4Continued" style="display: none;">
+                You're back home. You leave your lunch ready for tomorrow and <button id = "scene4Continue">go to bed</button> .
             </p>
         </section>
 
         <section id = "scene5" style="display: none;">
             <h1>Friday Day 5</h1>
             <p id = "">
-                Today is Friday, and while you don’t have classes on Friday, you do have <span></span> work. According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours.
+                Today is Friday, and while you don’t have classes on Friday, you do have <span>work</span> . According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours.
 
                 You work on Fridays and Saturdays for 8 hours each day and get paid at the end of the month. Totaling 16 hours per week and a $960 paycheck.
 
-                After finishing your shift you return home. <button>Tomorrow is the weekend.</button>  
+                After finishing your shift you return home. <button id = "scene5Continue">Tomorrow is the weekend.</button>  
             </p>
         </section>
 
         <section id = "scene6" style="display: none;">
-            <h1>Saturday Day 8</h1>
+            <h1>Saturday Day 6</h1>
             <p id = "">
                 You wake up and repeat what you did yesterday. You return home to have dinner. 
 
-                While having dinner you get a text from your childhood friend. 
+                While having dinner you get a text from your childhood friend. <br>
 
-                Hey, I’m thinking of having a get-together for my birthday tomorrow! Should you attend?
-                <button>Attend and bring a gift ($30)</button>
-                <button>Attend and get a small gift ($10)</button>
-                <button>Attend without a gift.</button>
-                <button>Decline and say you can’t make it.</button>
+                <span>Hey, I’m thinking of having a get-together for my birthday tomorrow! </span><br>Should you attend?<br>
+                <button id = "attend30">Attend and bring a gift ($30)</button>
+                <button id = "attend10">Attend and get a small gift ($10)</button>
+                <button id = "attend">Attend without a gift.</button>
+                <button id = "delineAttend">Decline and say you can’t make it.</button>
             </p>
         </section>
 
         <section id = "scene7" style="display: none;">
             <h1>Sunday Day 7</h1>
-            <p id = "">
-                You declined your friend's invitation and said you were busy. Your friend is disappointed but they understand. You don’t have anything else planned today so you <button>stay home and study.</button>  
+            <p id = "7declineAttend"  style="display: none;" >
+                You declined your friend's invitation and said you were busy. Your friend is disappointed but they understand. You don’t have anything else planned today so you <button id = "7Home">stay home and study.</button>  
             </p>
-            <p id = "">
+            <p id = "7attend"  style="display: none;">
                 You arrive at the event. After having a tough week, you feel much better after seeing your friends. It’s getting late and you’re getting extremely tired. Should you leave early and take the transit bus or stay a bit longer and get a ride home?
-                <button>Get a Uber (-$10)</button> 
-                <button>Stay longer and get a ride home.</button> 
+                <button id = "7Uber">Get a Uber (-$10)</button> 
+                <button id = "7Stay">Stay longer and get a ride home.</button> 
             </p>
-            <p id = "">
-                You arrive home. You climb in bed and get a notification on your phone. “Your mobile plan is about to expire.You can renew your plan online at anytime.”
+            <p id = "scene7Part2"  style="display: none;">
+                You climb in bed and get a notification on your phone. “Your mobile plan is about to expire.You can renew your plan online at anytime.”
 
                 $10 is the cheapest <span>mobile plan</span> you could find with unlimited talk, text, and 1GB of data. 
 
                 The national average is about $144 a month but if you know what you need, mobile plans can be as cheap as $7 per month.
 
-                After renewing your mobile plan you decide to work on some homework until you <button>fall asleep</button>.
+                After renewing your mobile plan you decide to work on some homework until you <button id = "7Continue">fall asleep</button>.
             </p>
         </section>
 
@@ -196,7 +200,7 @@
                 
                 You buy more than you usually do in an attempt to avoid having to go back to the supermarket for a couple of days.
                 
-                You go to the cashier and the bill is $70 in total. It's more than what you expected, but there isn't anything you could take out. You pay then <button>go home and rest</button> .
+                You go to the cashier and the bill is $70 in total. It's more than what you expected, but there isn't anything you could take out. You pay then <button id = "scene8Continue">go home and rest</button> .
             </p>
         </section>
         <section id = "scene9" style="display: none;">
@@ -209,7 +213,7 @@
                 
                 On your way home you saw many people sneezing and coughing. You hope you don’t catch anything. 
                 
-                After you get home, you go <button>straight to bed</button>.
+                After you get home, you go <button id = "scene9Continue">straight to bed</button>.
             </p>
         </section>
         <section id = "scene10" style="display: none;">
@@ -217,26 +221,34 @@
             <p id = "">
                 Your alarm rings. You feel like death. You feel weak, your head hurts, and your eyesight is fuzzy. You wonder if you caught the same thing your classmates have.
 
-                You think that maybe it might be a good idea to stay in bed today, but you know that it will affect your grades. On the other hand, if you go to a doctor you will have to co-pay $100 and extra for the cost of medication. You get health insurance from your tuition but it unfortunately does not cover everything. What will you do?
+                You think that maybe it might be a good idea to stay in bed today, but you know that it will affect your grades. On the other hand, if you go to a doctor you will have to co-pay $100 and extra for the cost of medication. You get health insurance from your tuition but it unfortunately does not cover everything. What will you do?<br><button>Go to class anyway.</button><br><button>Rest in bed.</button><br><button>Go see a doctor (-$100).</button><br>
             </p>
-            <p id = "">
-                <button>Go to class anyway.</button>
-                A few hours after you arrive, your coughing gets worse and one of your Professors notices. They advise you not to come to the class until you get better and to go see a doctor. You pick up your stuff and go back home.
-                You feel worse by the minute. Maybe it would be a good idea to <button>visit the doctor</button>.
 
-                <button>Go see a doctor (-$100).</button>
-                With a bit of difficulty, you made it to the doctor's office. You've been sweating and coughing a lot. Your headache is worse.
-                The doctor takes your temperature and sees you're a little feverish. He indicates to rest in bed for today and tomorrow. He gives you a prescription for cough syrup and painkillers.
-                You ask if you have to buy the medicine and he insists that it will make you feel a lot better and recover quickly.
-                <button>Go to the pharmacy</button>
+                <p>
+                    A few hours after you arrive, your coughing gets worse and one of your Professors notices. They advise you not to come to the class until you get better and to go see a doctor. You pick up your stuff and go back home.
+                    You feel worse by the minute. Maybe it would be a good idea to <button>visit the doctor</button>.
+                </p>
+                <p>
+                    With a bit of difficulty, you made it to the doctor's office. You've been sweating and coughing a lot. Your headache is worse.
+                    The doctor takes your temperature and sees you're a little feverish. He indicates to rest in bed for today and tomorrow. He gives you a prescription for cough syrup and painkillers.
+                    You ask if you have to buy the medicine and he insists that it will make you feel a lot better and recover quickly.
+                    <button>Go to the pharmacy</button>
+                </p>
+                
 
-                <button>Rest in bed.</button>
-                You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe.
-                Maybe it would be a good idea to <button>visit the doctors.</button>
+                
+                <p>
+                    You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe. Maybe it would be a good idea to <button>visit the doctors.</button>
+                </p>
+                
 
-                You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, your total bill is $30. You pay for the medicine and <button>go back home to rest.</button>
+                <p>
+                    You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, your total bill is $30. You pay for the medicine and <button>go back home to rest.</button>
+                </p>
 
-                You take your cough syrup and painkillers. The doctor told you to stay in bed tomorrow, you should be better in two days. <button>Continue</button>
+            <p>
+                You take your cough syrup and painkillers. The doctor told you to stay in bed tomorrow, you should be better in two days. 
+                <button>Continue</button>
             </p>
         </section>
         <section id = "scene11" style="display: none;">
@@ -378,10 +390,11 @@
                 You wake up because of a notification on your phone
                 It's a message from your group of friends. They're planning something for today and want to try a place that just opened near one of their houses. You don't know the place's prices, but taking into consideration the usual prices of restaurants, you will be spending at least $12.000 plus your transportation needs. Additionally, you have a test tomorrow that is 15% of your grade, and should probably focus on studying.
                 
-                What will you tell your friends? Will you go to the pizza place or will you tell them that you can't go?
+                What will you tell your friends? Will you <button>go to the pizza place</button> or will you <button>tell them that you can't go</button>?
+
                 You tell your friends that you don't think you can go and thank them for the invitation anyway.
                 Some minutes later, you get a private message from one of your friends. He says that if it's because of money issues, he can pay your bill. However, you would still need to figure out transportation.
-                You're moved by his help, but you also feel a bit guilty. You know your friend doesn't have that much money either. Will you take the invitation or would you rather stay at home?
+                You're moved by his help, but you also feel a bit guilty. You know your friend doesn't have that much money either. Will you  <button>take the invitation</button> or would you rather <button>stay at home</button>?
                 
                 You arrive at the pizza place and you meet your friends. You’re glad you went out. Most of the time you've been eating the same dishes every day, so it feels good to eat something different. 
                 
@@ -398,16 +411,23 @@
         <section id = "scene22" style="display: none;">
             <h1>Monday Day 22</h1>
             <p>
-                Today is the big test and 
-                you think you did well thanks to the studying you did last night.
+                Today is the big test and you think you did well thanks to the studying you did last night.
                 you aren’t confident in how well you did but you did your best. Maybe you should’ve studied a bit more.
 
-                After class, you remember that this week you have to pay rent. You anxiously check your bank account and you see that you have ${money} left.
+                After class, you remember that this week you have to pay rent. You anxiously check your bank account and you see that you have <p class = "totalMoney"></p> left.
 
                 You get an email saying you have a pre-approved loan for $500.000 that you could pay up to 12 months in easy $43.93. Installments with an APR of 10%. You dream about all the things you could do if you requested that loan, but the idea of being in debt for that many months is scary.
 
                 You think about it some more as you <button>go home to sleep</button>. 
+            </p>
+            <p>
+                Today is the big test and you aren’t confident in how well you did but you did your best. Maybe you should’ve studied a bit more.
 
+                After class, you remember that this week you have to pay rent. You anxiously check your bank account and you see that you have <p class = "totalMoney"></p> left.
+
+                You get an email saying you have a pre-approved loan for $500.000 that you could pay up to 12 months in easy $43.93. Installments with an APR of 10%. You dream about all the things you could do if you requested that loan, but the idea of being in debt for that many months is scary.
+
+                You think about it some more as you <button>go home to sleep</button>. 
             </p>
         </section>
         <section id = "scene23" style="display: none;">
@@ -416,13 +436,11 @@
                 It’s Wednesday and you're checking your phone.
 
                 After reading your emails, you notice you just got a mail about your natural gas bill.
-                “New Notification: Gas Bill.
+                “New Notification: <span>Gas Bill</span>.
                 Total to be paid: $20.00”
 
                 The average gas bill in California is $31. Luckily this bill is cheaper than the electric or water ones. You decide to <button>pay immediately</button> to keep bills from piling up.
-
-                If electricPaid is false: You also decide to pay off your Electric Bill for peace of mind $90
-
+                <!-- If electricPaid is false: You also decide to pay off your Electric Bill for peace of mind $90 -->
             </p>
         </section>
         <section id = "scene24" style="display: none;">
@@ -449,17 +467,21 @@
                 Even if you borrowed money from someone, you know you wouldn't be able to pay it back next month in full. The other solution seems to be to take the pre-approved loan of $500.00, but you'll have to spend the next 12 months paying it back in installments and if you lose your job, these installments could become unaffordable.
 
                 You think about it a little since it's either that or risk losing your apartment... But you finally end up <button>requesting it</button>.
-
-                With just a couple of clicks, the money comes into your account. It makes you happy to see ${money} in your account. You quickly pay this month's rent to the owner and make ends meet.
+            </p>
+            <p>
+                With just a couple of clicks, the money comes into your account. It makes you happy to see <p class = "totalMoney"></p> in your account. You quickly pay this month's rent to the owner and make ends meet.
 
                 Although you will temporarily have a little more money in your account, that money is debt disguised as savings. When you finish paying off that loan, you'll have given more than $500.00 to the bank, and let's not forget the student loans you’re already paying off.
 
                 But you've already borrowed it. You may be able to take another loan to pay for the first one... 
 
                 You decide to go to bed so you don't have to think about it. At least you still have your little apartment and you haven't lost faith that someday you’ll be debt and worry-free.
-
                 <button>Continue</button>
             </p>
+        </section>
+
+        <section id = "results">
+
         </section>
     </main>
 
