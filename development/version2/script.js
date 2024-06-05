@@ -5,11 +5,7 @@
     let grades = 90;
     let isReminderSet = false;
 
-/*     alert(` Play through the days making not on your choices and finish through the 25 days. Try and maintain your money as best as possible. 
-
-    Play through the days and choose the most expensive options. 
-    
-    Play through the days and choose the options that would most likely to affect your health. `); */
+    alert(` Play through the days. Try and maintain your money as best as possible. Play through the days and choose the most expensive options. Play through the days and choose the options that would most likely to affect your health. `);
 
 
     function updateMoney(){
@@ -18,15 +14,11 @@
 
     document.getElementById('begin').addEventListener('click', function(){
         document.getElementById('dataBar').style.display = 'block';
+        document.getElementById('dataHealth').style.display = 'block';
+        document.getElementById('dataGrades').style.display = 'block';
         document.getElementById('beginMain').style.display = 'none';
         document.getElementById('scene1').style.display = 'block';
     });
-
-/*     document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
-
-    }); */
 
 
     document.getElementById('scene1Phonering').addEventListener('click', function(){
@@ -330,14 +322,12 @@
 
     });
     document.getElementById('scene15Lunch').addEventListener('click', function(){
-        /* alert("You've finished the testing prototype, thank you!"); */
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
+        alert("You've finished the testing prototype, thank you!");
 
     });
 
     document.getElementById('scene15Assignments').addEventListener('click', function(){
-        /* alert("You've finished the testing prototype, thank you!"); */
+        alert("You've finished the testing prototype, thank you!");
     });
 
 

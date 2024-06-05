@@ -1,0 +1,67 @@
+body {
+    background-color: #030102;
+    color: #ffffff;
+}
+
+
+Main {
+    margin: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+main {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span {
+    color: #e96ba8;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+h1 {
+    color: #ffc0ad;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+p{
+    line-height: 1.5;
+}
+
+#dataBarStyle {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: #1f0b15;
+    padding: 30px;
+}
+
+.phoneNotification {
+    color: white;
+    font-style: italic;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #e96ba8;
+    font-weight: 900;
+    border: none;
+    color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}

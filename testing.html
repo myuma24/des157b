@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Floating UI Tutorial</title>
+    <style>
+        #dataBarINFO, #dataHealthINFO, #dataGradesINFO {
+        display: none;
+        width: max-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #222;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 90%;
+        }
+        #arrow, #healthArrow, #gradesArrow {
+        position: absolute;
+        background: #222;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        }
+      </style>
+  </head>
+
+
+  <body>
+    <div id = "dataBarStyle">
+      <div id = "dataBar" >
+        <span id="MoneyCount" aria-describedby="tooltip">
+          Money: $1440
+        </span>
+        <div id="dataBarINFO" role="tooltip">
+          This amount is decided on your total income plus half of your income to allot for the previous month.
+          <div id="arrow"></div>
+        </div>
+      </div>
+      <div id = "dataHealth" >
+        <span id="HealthCount" aria-describedby="tooltip">
+          Happiness: 100
+        </span>
+        <div id="dataHealthINFO" role="tooltip">
+          Your choices will affect your happiness level. Just make sure it doesn't fall too low.
+          <div id="healthArrow"></div>
+        </div>
+      </div>
+      <div id = "dataGrades">
+        <span id="GradesCount" aria-describedby="tooltip">
+          Your Grades: B
+        </span>
+        <div id="dataGradesINFO" role="tooltip">
+          This factor is decided on the global average letter grade a college student gets. Remember, it's okay to not get A's!!!
+          <div id="gradesArrow"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <script type="module">
+      import {
+        computePosition,
+        flip,
+        shift,
+        offset,
+        arrow,
+      } from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5/+esm';
+
+      const MoneyCount = document.querySelector('#MoneyCount');
+      const HealthCount = document.querySelector('#HealthCount');
+      const GradesCount = document.querySelector('#GradesCount');
+      const dataBarINFO = document.querySelector('#dataBarINFO');
+      const dataHealthINFO = document.querySelector('#dataHealthINFO');
+      const dataGradesINFO = document.querySelector('#dataGradesINFO');
+      const arrowElement = document.querySelector('#arrow');
+      const healthArrowElement = document.querySelector('#healthArrow');
+      const gradesArrowElement = document.querySelector('#gradesArrow');
+
+      function updateTooltip(target, tooltip, arrowEl) {
+        computePosition(target, tooltip, {
+          placement: 'top',
+          middleware: [
+            offset(6),
+            flip(),
+            shift({padding: 5}),
+            arrow({element: arrowEl}),
+          ],
+        }).then(({x, y, placement, middlewareData}) => {
+          Object.assign(tooltip.style, {
+            left: `${x}px`,
+            top: `${y}px`,
+          });
+
+          const {x: arrowX, y: arrowY} = middlewareData.arrow;
+
+          const staticSide = {
+            top: 'bottom',
+            right: 'left',
+            bottom: 'top',
+            left: 'right',
+          }[placement.split('-')[0]];
+
+          Object.assign(arrowEl.style, {
+            left: arrowX != null ? `${arrowX}px` : '',
+            top: arrowY != null ? `${arrowY}px` : '',
+            right: '',
+            bottom: '',
+            [staticSide]: '-4px',
+          });
+        });
+      }
+
+      function showTooltip(tooltip) {
+        tooltip.style.display = 'block';
+      }
+      
+      function hideTooltip(tooltip) {
+        tooltip.style.display = 'none';
+      }
+
+      [
+        [MoneyCount, dataBarINFO, arrowElement],
+        [HealthCount, dataHealthINFO, healthArrowElement],
+        [GradesCount, dataGradesINFO, gradesArrowElement]
+      ].forEach(([target, tooltip, arrowEl]) => {
+        target.addEventListener('mouseenter', () => { showTooltip(tooltip); updateTooltip(target, tooltip, arrowEl); });
+        target.addEventListener('mouseleave', () => hideTooltip(tooltip));
+        target.addEventListener('focus', () => { showTooltip(tooltip); updateTooltip(target, tooltip, arrowEl); });
+        target.addEventListener('blur', () => hideTooltip(tooltip));
+      });
+
+    </script>
+  </body>
+</html>
