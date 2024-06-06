@@ -34,24 +34,33 @@
     <main>
         <div id = "dataBarStyle" style="display: none;">
             <div id = "dataBar" >
-                <span id = "MoneyCount">Money: $1440</span>
-                <div id = "dataBarINFO">
-                    This amount is decided on your total income plus half of your income to allot for the previous month.
-                </div>
+              <span id="MoneyCount" aria-describedby="tooltip">
+                Money: $1440
+              </span>
+              <div id="dataBarINFO" role="tooltip">
+                This amount is decided on your total income plus half of your income to allot for the previous month.
+                <div id="arrow"></div>
+              </div>
             </div>
             <div id = "dataHealth" >
-                <span id = "HealthCount">Happiness: 100</span>
-                <div id = "dataHealthINFO">
-                    Your choices will affect your happiness level. Just make sure it doesn't fall too low.
-                </div>
+              <span id="HealthCount" aria-describedby="tooltip">
+                Happiness: 100
+              </span>
+              <div id="dataHealthINFO" role="tooltip">
+                Your choices will affect your happiness level. Just make sure it doesn't fall too low.
+                <div id="healthArrow"></div>
+              </div>
             </div>
             <div id = "dataGrades">
-                <span id = "GradesCount">Your Grades: B</span>
-                <div id = "dataGradesINFO">
-                    This factor is decided on the global average letter grade a college student gets. Remember, it's okay to not get A's!!!
-                </div>
+              <span id="GradesCount" aria-describedby="tooltip">
+                Your Grades: B
+              </span>
+              <div id="dataGradesINFO" role="tooltip">
+                This factor is decided on the global average letter grade a college student gets. Remember, it's okay to not get A's!!!
+                <div id="gradesArrow"></div>
+              </div>
             </div>
-        </div>
+          </div>
 
         <section id = "beginMain">
             <h1>25 Days as a College Student</h1>
@@ -210,7 +219,7 @@
                 You declined your friend's invitation and said you were busy. Your friend is disappointed but they understand. You don’t have anything else planned today so you <button id = "7Home">stay home and study.</button>  
             </p>
             <p id = "7attend"  style="display: none;">
-                You arrive at the event. After having a tough week, you feel much better after seeing your friends. It’s getting late and you’re getting extremely tired. Should you leave early and take the transit bus or stay a bit longer and get a ride home?
+                You arrive at the event. After having a tough week, you feel much better after seeing your friends. It’s getting late and you still have homework to do. Should you leave early and take the transit bus or stay a bit longer and get a ride home?
                 <button id = "7Uber">Get a Uber (-$10)</button> 
                 <button id = "7Stay">Stay longer and get a ride home.</button> 
             </p>
@@ -389,7 +398,7 @@
             <p id = "scene16v3" style="display: none;">
                 You make your order and enjoy your lunchtime with your friend. While you feel a bit guilty for spending money, you feel a little less lonely.
                 
-                You take a taxi (-$10) home and make yourself a quick meal for tomorrow. You think you should try to eat healthier, but vegetables at the supermarket are expensive. Maybe this weekend you should try to go to a market and buy some healthier food. 
+                You take the bus home and make yourself a quick meal for tomorrow. You think you should try to eat healthier, but vegetables at the supermarket are expensive. Maybe this weekend you should try to go to a market and buy some healthier food. 
                 
                 After finishing up what you need to do for the day, <button class = "scene16Cont">you go to bed</button>.
             </p>
@@ -401,7 +410,7 @@
                 <button id = "scene17v2">Continue</button>
             </p>
             <p id = "scene17v3" style="display: none;">
-                After arriving home, you're still thinking about the classmate on academic probation. Your grades aren’t the greatest either and you think about what you would do if you were dropped from college. You hope to at least not get sick next month.
+                After arriving home, you're still thinking about the classmate on academic probation. You think about what you would do if you were dropped from college. You hope to at least not get sick next month.
 
                 You calm yourself down so you can <button id = "scene17v4">go to sleep</button> early.
             </p>
@@ -584,5 +593,78 @@
         </div>
     </main>
 
+    <script type="module">
+        import {
+          computePosition,
+          flip,
+          shift,
+          offset,
+          arrow,
+        } from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5/+esm';
+  
+        const MoneyCount = document.querySelector('#MoneyCount');
+        const HealthCount = document.querySelector('#HealthCount');
+        const GradesCount = document.querySelector('#GradesCount');
+        const dataBarINFO = document.querySelector('#dataBarINFO');
+        const dataHealthINFO = document.querySelector('#dataHealthINFO');
+        const dataGradesINFO = document.querySelector('#dataGradesINFO');
+        const arrowElement = document.querySelector('#arrow');
+        const healthArrowElement = document.querySelector('#healthArrow');
+        const gradesArrowElement = document.querySelector('#gradesArrow');
+  
+        function updateTooltip(target, tooltip, arrowEl) {
+          computePosition(target, tooltip, {
+            placement: 'top',
+            middleware: [
+              offset(6),
+              flip(),
+              shift({padding: 5}),
+              arrow({element: arrowEl}),
+            ],
+          }).then(({x, y, placement, middlewareData}) => {
+            Object.assign(tooltip.style, {
+              left: `${x}px`,
+              top: `${y}px`,
+            });
+  
+            const {x: arrowX, y: arrowY} = middlewareData.arrow;
+  
+            const staticSide = {
+              top: 'bottom',
+              right: 'left',
+              bottom: 'top',
+              left: 'right',
+            }[placement.split('-')[0]];
+  
+            Object.assign(arrowEl.style, {
+              left: arrowX != null ? `${arrowX}px` : '',
+              top: arrowY != null ? `${arrowY}px` : '',
+              right: '',
+              bottom: '',
+              [staticSide]: '-4px',
+            });
+          });
+        }
+  
+        function showTooltip(tooltip) {
+          tooltip.style.display = 'block';
+        }
+        
+        function hideTooltip(tooltip) {
+          tooltip.style.display = 'none';
+        }
+  
+        [
+          [MoneyCount, dataBarINFO, arrowElement],
+          [HealthCount, dataHealthINFO, healthArrowElement],
+          [GradesCount, dataGradesINFO, gradesArrowElement]
+        ].forEach(([target, tooltip, arrowEl]) => {
+          target.addEventListener('mouseenter', () => { showTooltip(tooltip); updateTooltip(target, tooltip, arrowEl); });
+          target.addEventListener('mouseleave', () => hideTooltip(tooltip));
+          target.addEventListener('focus', () => { showTooltip(tooltip); updateTooltip(target, tooltip, arrowEl); });
+          target.addEventListener('blur', () => hideTooltip(tooltip));
+        });
+  
+      </script>
 </body>
 </html>

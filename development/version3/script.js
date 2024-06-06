@@ -1,8 +1,8 @@
 (function(){
     'use strict'
     let money = 1440;
-    let happiness = 100;
-    let grades = 90;
+    let happiness = 80;
+    let grades = 80;
     let isReminderSet = false;
 
     function updateMoney(){
@@ -13,12 +13,42 @@
         document.getElementById('HealthCount').innerHTML = `Happiness: ${happiness}`;
     }
 
-    updateHappiness();
+    function countGrades(){
+        if (grades >= 98){
+            document.getElementById('GradesCount').innerHTML = `Your Grades: A+`;
+        } else if (grades >= 93) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: A`;
+        } else if (grades >= 90) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: A-`;
+        } else if (grades >= 88 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: B+`;
+        } else if (grades >= 83 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: B`;
+        } else if (grades >= 80 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: B-`;
+        }
+        else if (grades >= 78 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: C+`;
+        } else if (grades >= 73 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: C`;
+        }
+        else if (grades >= 70 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: C-`;
+        }
+        else if (grades >= 60 ) {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: D`;
+        } else {
+            document.getElementById('GradesCount').innerHTML = `Your Grades: F`;
+        }
+    }
 
     document.getElementById('begin').addEventListener('click', function(){
         document.getElementById('dataBarStyle').style.display = 'flex';
         document.getElementById('beginMain').style.display = 'none';
         document.getElementById('scene1').style.display = 'block';
+        updateHappiness();
+        updateMoney();
+        countGrades();
     });
 
     document.getElementById('scene1Phonering').addEventListener('click', function(){
@@ -48,18 +78,26 @@
     }
 
     document.getElementById('scene2op1').addEventListener('click', function(){
+        happiness -= 4;
+        updateHappiness()
+        grades += 6;
+        countGrades();
         document.getElementById('2op1').style.display = 'block';
         document.getElementById('scene2Part1').style.display = 'none';
     });
 
     document.getElementById('scene2op2').addEventListener('click', function(){
+        happiness += 6;
+        updateHappiness()
+        grades -= 3;
+        countGrades();
         document.getElementById('2op2').style.display = 'block';
         document.getElementById('scene2Part1').style.display = 'none';
     });
 
     document.getElementById('2Next1').addEventListener('click', function(){
-            document.getElementById('scene3V1').style.display = 'block';
-            document.getElementById('scene2').style.display = 'none';
+        document.getElementById('scene3V1').style.display = 'block';
+        document.getElementById('scene2').style.display = 'none';
     });
 
     document.getElementById('2Next2').addEventListener('click', function(){
@@ -103,6 +141,8 @@
     }
 
     document.getElementById('buySnack').addEventListener('click', function(){
+        happiness += 5;
+        updateHappiness()
         document.getElementById('scene4Continued').style.display = 'block';
         document.getElementById('scene4Text').style.display = 'none';
         money -= 66;
@@ -111,6 +151,8 @@
 
 
     document.getElementById('DontbuySnack').addEventListener('click', function(){
+        happiness -=5;
+        updateHappiness()
         document.getElementById('scene4Continued').style.display = 'block';
         document.getElementById('scene4Text').style.display = 'none';
         money -= 60;
@@ -132,6 +174,8 @@
 
     document.getElementById('attend30').addEventListener('click', function(){
         money -= 30;
+        happiness += 5;
+        updateHappiness()
         updateMoney();
         document.getElementById('7attend').style.display = 'block';
         document.getElementById('scene7').style.display = 'block';
@@ -141,6 +185,8 @@
 
     document.getElementById('attend10').addEventListener('click', function(){
         money -= 10;
+        happiness +- 2;
+        updateHappiness()
         updateMoney();
         document.getElementById('7attend').style.display = 'block';
         document.getElementById('scene7').style.display = 'block';
@@ -164,6 +210,8 @@
 
     document.getElementById('7Uber').addEventListener('click', function(){
         money -= 10;
+        grades -= 5;
+        countGrades();
         updateMoney();
         document.getElementById('scene7Part2').style.display = 'block';
         document.getElementById('7attend').style.display = 'none';
@@ -177,6 +225,8 @@
     });
 
     document.getElementById('7Home').addEventListener('click', function(){
+        grades += 3;
+        countGrades();
         document.getElementById('scene7Part2').style.display = 'block';
         document.getElementById('7declineAttend').style.display = 'none';
 
@@ -205,12 +255,18 @@
     });
 
     document.getElementById('scene10Class').addEventListener('click', function(){
+        grades += 1;
+        countGrades();
         document.getElementById('scene10ClassOpt').style.display = 'block';
         document.getElementById('scene10Prompt').style.display = 'none';
 
     });
     
     document.getElementById('scene10Rest').addEventListener('click', function(){
+        happiness += 3;
+        updateHappiness()
+        grades -= 11;
+        countGrades();
         document.getElementById('scene10BedOpt').style.display = 'block';
         document.getElementById('scene10Prompt').style.display = 'none';
 
@@ -218,6 +274,10 @@
 
     document.getElementById('scene10Doctor').addEventListener('click', function(){
         money -= 100;
+        happiness += 4;
+        updateHappiness()
+        grades -= 11;
+        countGrades();
         updateMoney();
         document.getElementById('scene10DocOpt').style.display = 'block';
         document.getElementById('scene10Prompt').style.display = 'none';
@@ -270,11 +330,19 @@
     });
 
     document.getElementById('scene13Call').addEventListener('click', function(){
+        happiness += 3;
+        updateHappiness()
+        grades -= 2;
+        countGrades();
         document.getElementById('scene13CallBack').style.display = 'block';
         document.getElementById('scene13p2').style.display = 'none';
     });
     
     document.getElementById('scene13ignoreCall').addEventListener('click', function(){
+        happiness -= 4;
+        updateHappiness()
+        grades += 3;
+        countGrades();
         document.getElementById('scene13ignore').style.display = 'block';
         document.getElementById('scene13p2').style.display = 'none';
     });
@@ -331,6 +399,10 @@
     }
 
     document.getElementById('scene15Lunch').addEventListener('click', function(){
+        happiness += 2;
+        updateHappiness()
+        grades -= 2;
+        countGrades();
         document.getElementById('scene16').style.display = 'block';
         document.getElementById('scene16v2').style.display = 'block';
         document.getElementById('scene15').style.display = 'none';
@@ -338,6 +410,10 @@
     });
 
     document.getElementById('scene15Assignments').addEventListener('click', function(){
+        grades += 3;
+        countGrades();
+        happiness -=2;
+        updateHappiness()
         document.getElementById('scene16').style.display = 'block';
         document.getElementById('scene16v1').style.display = 'block';
         document.getElementById('scene15').style.display = 'none';
@@ -379,11 +455,15 @@
     });
 
     document.getElementById('scene18Cont').addEventListener('click', function(){
+        grades += 2;
+        countGrades();
         document.getElementById('scene19').style.display = 'block';
         document.getElementById('scene18').style.display = 'none';
     });
 
     document.getElementById('bus').addEventListener('click', function(){
+        happiness -= 4;
+        updateHappiness()
         document.getElementById('busTxt').style.display = 'block';
         document.getElementById('scene19Txt').style.display = 'none';
 
@@ -391,6 +471,8 @@
 
     document.getElementById('ubertoWork').addEventListener('click', function(){
         money -= 10;
+        happiness += 2;
+        updateHappiness()
         updateMoney();
         document.getElementById('uberTxt').style.display = 'block';
         document.getElementById('scene19Txt').style.display = 'none';
@@ -408,6 +490,8 @@
 
     document.getElementById('buyFruit').addEventListener('click', function(){
         money -= 55;
+        happiness += 5;
+        updateHappiness()
         updateMoney();
         document.getElementById('scene20V1').style.display = 'block';
         document.getElementById('scene20Txt').style.display = 'none';
@@ -416,6 +500,8 @@
 
     document.getElementById('getUsual').addEventListener('click', function(){
         money -= 40;
+        happiness -= 5;
+        updateHappiness()
         updateMoney();
         document.getElementById('scene20V1').style.display = 'block';
         document.getElementById('scene20Txt').style.display = 'none';
@@ -430,6 +516,10 @@
 
     document.getElementById('pizzaGo').addEventListener('click', function(){
         money -= 12;
+        happiness += 5;
+        updateHappiness()
+        grades -= 3;
+        countGrades();
         updateMoney();
         pizzaGo = true;
         document.getElementById('scene21V4').style.display = 'block';
@@ -439,6 +529,7 @@
     document.getElementById('scene21Uber').addEventListener('click', function(){
         money -= 10;
         happiness += 2;
+        updateHappiness()
         updateMoney();
         document.getElementById('scene21V5').style.display = 'block';
         document.getElementById('scene21V4').style.display = 'none';
@@ -458,7 +549,9 @@
 
 
     document.getElementById('pizzaGo2').addEventListener('click', function(){
-        happiness += 10;
+        happiness += 5;
+        grades -= 3;
+        countGrades();
         updateHappiness();
         pizzaGo = true;
         document.getElementById('scene21V4').style.display = 'block';
@@ -466,7 +559,9 @@
     });
 
     document.getElementById('pizzaDecline2').addEventListener('click', function(){
-        happiness -= 5;
+        happiness -= 8;
+        grades += 4;
+        countGrades();
         updateHappiness();
         pizzaGo = false;
         document.getElementById('scene21V3').style.display = 'block';
@@ -564,20 +659,6 @@
             document.getElementById('dataBarStyle').style.display = 'none';
             document.getElementById('scene25').style.display = 'none';
         });
-    }
-
-    function countGrades(){
-        if (grades >= 90){
-            document.getElementById('GradesCount').innerHTML = `Your Grades: A`;
-        } else if (grades >= 80) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: B`;
-        } else if (grades >= 70) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: C`;
-        } else if (grades >= 60 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: D`;
-        } else {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: F`;
-        }
     }
 
     
