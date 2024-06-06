@@ -5,7 +5,7 @@
     let grades = 80;
     let isReminderSet = false;
 
-    alert('Hello and welcome! You will be asked to play through multiple times however if you cannot, no worries, please pick one of the three following scenarios, or do your own thing! 1. Play through the days making not on your choices and finish through the 25 days. Try and maintain your money above $700. 2. Play through the days and choose the most expensive options. 3. Play through the days and choose the options that would most likely to affect your health.');
+    alert('Hello and welcome! You will be asked to play through multiple times however if you cannot, no worries, please pick one of the three following scenarios, or do your own thing! Play through the days making note on your choices and finish through the 25 days. 1. Try and maintain your money above $700. 2. Play through the days and choose the most expensive options. 3. Play through the days and choose the options that would most likely to affect your health.');
 
     function updateMoney(){
         document.getElementById('MoneyCount').innerHTML = `Money: $${money}`;
