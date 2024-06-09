@@ -35,7 +35,6 @@
         <div id = "dataBarStyle" style="display: none;">
             <div id = "dataBar" >
               <span id="MoneyCount" aria-describedby="tooltip">
-                Money: $1440
               </span>
               <div id="dataBarINFO" role="tooltip">
                 This amount is decided on your total income plus half of your income to allot for the previous month.
@@ -44,7 +43,6 @@
             </div>
             <div id = "dataHealth" >
               <span id="HealthCount" aria-describedby="tooltip">
-                Happiness: 100
               </span>
               <div id="dataHealthINFO" role="tooltip">
                 Your choices will affect your happiness level. Just make sure it doesn't fall too low.
@@ -53,7 +51,6 @@
             </div>
             <div id = "dataGrades">
               <span id="GradesCount" aria-describedby="tooltip">
-                Your Grades: B
               </span>
               <div id="dataGradesINFO" role="tooltip">
                 This factor is decided on the global average letter grade a college student gets. Remember, it's okay to not get A's!!!
@@ -173,15 +170,21 @@
             <h1>
                 Day 4 Thursday
             </h1>
-            <p  id = "scene4Text">
-                Today was a busier day but you returned home from your classes. 
+            <div id = "scene4Text">
+                <p >
+                    Today was a busier day but you returned home from your classes. 
+                </p>
+                <p>
+                    You remember to prepare lunch but realize you're out of food for the week, so you decide to go to the supermarket to buy groceries. You pick only the necessities until you spot your favorite snack. You haven’t had it in a very long time and it only costs $6, however, what you're currently carrying already costs <span>$60</span> . 
+                </p>
+                <p>             
+                    On average, groceries cost between $290 to $548 per month for one person. If we divide $290 by four, you get about $72.50 per week.
+                </p>
+                <p>
+                    Do you <button id = "buySnack">buy the snack</button> or <button id = "DontbuySnack">only what you need?</button>
+                </p>
+            </div>
 
-                You remember to prepare lunch but realize you're out of food for the week, so you decide to go to the supermarket to buy groceries. You pick only the necessities until you spot your favorite snack. You haven’t had it in a very long time and it only costs $6, however, what you're currently carrying already costs <span>$60</span> . 
-                
-                On average, groceries cost between $290 to $548 per month for one person. If we divide $290 by four, you get about $72.50 per week.
-                
-                Do you <button id = "buySnack">buy the snack</button> or <button id = "DontbuySnack">only what you need?</button>
-            </p>
             <p id = "scene4Continued" style="display: none;">
                 You're back home. You leave your lunch ready for tomorrow and <button id = "scene4Continue">go to bed</button> .
             </p>
@@ -189,11 +192,16 @@
 
         <section id = "scene5" style="display: none;">
             <h1>Friday Day 5</h1>
-            <p id = "">
-                Today is Friday, and while you don’t have classes on Friday, you do have <span>work</span> . According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours. <br>
-
-                You work on Fridays and Saturdays for 8 hours each day and get paid at the end of the month. Totaling 16 hours per week and a $960 paycheck. <br>
-
+            <p>
+                Today is Friday, and while you don’t have classes on Friday, you do have work. 
+            </p>
+            <p>
+                According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours.
+            </p>
+            <p>
+                You work on Fridays and Saturdays for 8 hours each day and get paid at the end of the month. Totaling 16 hours per week and a $960 paycheck. 
+            </p>
+            <p>
                 After finishing your shift you return home. <button id = "scene5Continue">Tomorrow is the weekend.</button>  
             </p>
         </section>
@@ -201,11 +209,16 @@
         <section id = "scene6" style="display: none;">
             <h1>Saturday Day 6</h1>
             <p id = "">
-                You wake up and repeat what you did yesterday. You return home to have dinner. <br>
-
-                While having dinner you get a text from your childhood friend. <br>
-
-                <span class = "phoneNotification">Hey, I’m thinking of having a get-together for my birthday tomorrow! </span><br>Should you attend?<br>
+                You wake up and repeat what you did yesterday. You return home to have dinner.
+            </p>
+            <p>
+                While having dinner you get a text from your childhood friend.
+            </p>
+            <p>
+                <span class = "phoneNotification">Hey, I’m thinking of having a get-together for my birthday tomorrow!</span>
+            </p>
+            <p>
+                Should you attend?
                 <button id = "attend30">Attend and bring a gift ($30)</button>
                 <button id = "attend10">Attend and get a small gift ($10)</button>
                 <button id = "attend">Attend without a gift.</button>
@@ -223,17 +236,24 @@
                 <button id = "7Uber">Get a Uber (-$10)</button> 
                 <button id = "7Stay">Stay longer and get a ride home.</button> 
             </p>
-            <p id = "scene7Part2"  style="display: none;">
-                You start getting ready for bed. Suddenly you get a notification on your phone. <br>
-                
-                <span class = "phoneNotification">“Your mobile plan is about to expire.You can renew your plan online at anytime.”</span> <br>
+            <div id = "scene7Part2"  style="display: none;">
+                <p>
+                    You start getting ready for bed. Suddenly you get a notification on your phone.
+                </p>
+                <p>
+                    <span class = "phoneNotification">“Your mobile plan is about to expire.You can renew your plan online at anytime.”</span> <br>
+                </p>
+                <p>
+                    $10 is the cheapest <span>mobile plan</span> you could find with unlimited talk, text, and 1GB of data. 
+                </p>
+                <p>
+                    The national average is about $144 a month but if you know what you need, mobile plans can be as cheap as $7 per month.
+                </p>
+                <p>
+                    After renewing your mobile plan you decide to work on some homework until you <button id = "7Continue">fall asleep</button>.
+                </p>
+            </div>
 
-                $10 is the cheapest <span>mobile plan</span> you could find with unlimited talk, text, and 1GB of data. 
-
-                The national average is about $144 a month but if you know what you need, mobile plans can be as cheap as $7 per month.
-
-                After renewing your mobile plan you decide to work on some homework until you <button id = "7Continue">fall asleep</button>.
-            </p>
         </section>
 
         <section id = "scene8" style="display: none;">

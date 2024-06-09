@@ -5,7 +5,6 @@ body {
 
 
 Main {
-    margin: 10%;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -42,10 +41,10 @@ p{
     gap: 30px;
     background-color: #1f0b15;
     padding: 30px;
+    justify-content: space-around;
 }
 
 .phoneNotification {
-    color: white;
     font-style: italic;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -87,4 +86,15 @@ button {
     width: 8px;
     height: 8px;
     transform: rotate(45deg);
+}
+
+.section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 1s;
+}
+
+.section.shown {
+    opacity: 1;
+    visibility: visible;
 }

@@ -15,30 +15,30 @@
 
     function countGrades(){
         if (grades >= 98){
-            document.getElementById('GradesCount').innerHTML = `Your Grades: A+`;
+            document.getElementById('GradesCount').innerHTML = `Grades: A+`;
         } else if (grades >= 93) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: A`;
+            document.getElementById('GradesCount').innerHTML = `Grades: A`;
         } else if (grades >= 90) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: A-`;
+            document.getElementById('GradesCount').innerHTML = `Grades: A-`;
         } else if (grades >= 88 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: B+`;
+            document.getElementById('GradesCount').innerHTML = `Grades: B+`;
         } else if (grades >= 83 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: B`;
+            document.getElementById('GradesCount').innerHTML = `Grades: B`;
         } else if (grades >= 80 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: B-`;
+            document.getElementById('GradesCount').innerHTML = `Grades: B-`;
         }
         else if (grades >= 78 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: C+`;
+            document.getElementById('GradesCount').innerHTML = `Grades: C+`;
         } else if (grades >= 73 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: C`;
+            document.getElementById('GradesCount').innerHTML = `Grades: C`;
         }
         else if (grades >= 70 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: C-`;
+            document.getElementById('GradesCount').innerHTML = `Grades: C-`;
         }
         else if (grades >= 60 ) {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: D`;
+            document.getElementById('GradesCount').innerHTML = `Grades: D`;
         } else {
-            document.getElementById('GradesCount').innerHTML = `Your Grades: F`;
+            document.getElementById('GradesCount').innerHTML = `Grades: F`;
         }
     }
 
@@ -79,7 +79,7 @@
 
     document.getElementById('scene2op1').addEventListener('click', function(){
         happiness -= 4;
-        updateHappiness()
+        updateHappiness();
         grades += 6;
         countGrades();
         document.getElementById('2op1').style.display = 'block';
@@ -88,7 +88,7 @@
 
     document.getElementById('scene2op2').addEventListener('click', function(){
         happiness += 6;
-        updateHappiness()
+        updateHappiness();
         grades -= 3;
         countGrades();
         document.getElementById('2op2').style.display = 'block';
@@ -142,7 +142,7 @@
 
     document.getElementById('buySnack').addEventListener('click', function(){
         happiness += 5;
-        updateHappiness()
+        updateHappiness();
         document.getElementById('scene4Continued').style.display = 'block';
         document.getElementById('scene4Text').style.display = 'none';
         money -= 66;
@@ -152,7 +152,7 @@
 
     document.getElementById('DontbuySnack').addEventListener('click', function(){
         happiness -=5;
-        updateHappiness()
+        updateHappiness();
         document.getElementById('scene4Continued').style.display = 'block';
         document.getElementById('scene4Text').style.display = 'none';
         money -= 60;
@@ -175,7 +175,7 @@
     document.getElementById('attend30').addEventListener('click', function(){
         money -= 30;
         happiness += 5;
-        updateHappiness()
+        updateHappiness();
         updateMoney();
         document.getElementById('7attend').style.display = 'block';
         document.getElementById('scene7').style.display = 'block';
@@ -186,7 +186,7 @@
     document.getElementById('attend10').addEventListener('click', function(){
         money -= 10;
         happiness +- 2;
-        updateHappiness()
+        updateHappiness();
         updateMoney();
         document.getElementById('7attend').style.display = 'block';
         document.getElementById('scene7').style.display = 'block';
@@ -219,6 +219,7 @@
     });
     
     document.getElementById('7Stay').addEventListener('click', function(){
+        grades -= 7;
         document.getElementById('scene7Part2').style.display = 'block';
         document.getElementById('7attend').style.display = 'none';
 
@@ -275,7 +276,7 @@
     document.getElementById('scene10Doctor').addEventListener('click', function(){
         money -= 100;
         happiness += 4;
-        updateHappiness()
+        updateHappiness();
         grades -= 11;
         countGrades();
         updateMoney();
@@ -331,7 +332,7 @@
 
     document.getElementById('scene13Call').addEventListener('click', function(){
         happiness += 3;
-        updateHappiness()
+        updateHappiness();
         grades -= 2;
         countGrades();
         document.getElementById('scene13CallBack').style.display = 'block';
@@ -340,7 +341,7 @@
     
     document.getElementById('scene13ignoreCall').addEventListener('click', function(){
         happiness -= 4;
-        updateHappiness()
+        updateHappiness();
         grades += 3;
         countGrades();
         document.getElementById('scene13ignore').style.display = 'block';
@@ -400,7 +401,7 @@
 
     document.getElementById('scene15Lunch').addEventListener('click', function(){
         happiness += 2;
-        updateHappiness()
+        updateHappiness();
         grades -= 2;
         countGrades();
         document.getElementById('scene16').style.display = 'block';
@@ -413,7 +414,7 @@
         grades += 3;
         countGrades();
         happiness -=2;
-        updateHappiness()
+        updateHappiness();
         document.getElementById('scene16').style.display = 'block';
         document.getElementById('scene16v1').style.display = 'block';
         document.getElementById('scene15').style.display = 'none';
@@ -463,7 +464,7 @@
 
     document.getElementById('bus').addEventListener('click', function(){
         happiness -= 4;
-        updateHappiness()
+        updateHappiness();
         document.getElementById('busTxt').style.display = 'block';
         document.getElementById('scene19Txt').style.display = 'none';
 
@@ -472,7 +473,7 @@
     document.getElementById('ubertoWork').addEventListener('click', function(){
         money -= 10;
         happiness += 2;
-        updateHappiness()
+        updateHappiness();
         updateMoney();
         document.getElementById('uberTxt').style.display = 'block';
         document.getElementById('scene19Txt').style.display = 'none';
@@ -491,7 +492,7 @@
     document.getElementById('buyFruit').addEventListener('click', function(){
         money -= 55;
         happiness += 5;
-        updateHappiness()
+        updateHappiness();
         updateMoney();
         document.getElementById('scene20V1').style.display = 'block';
         document.getElementById('scene20Txt').style.display = 'none';
@@ -501,7 +502,7 @@
     document.getElementById('getUsual').addEventListener('click', function(){
         money -= 40;
         happiness -= 5;
-        updateHappiness()
+        updateHappiness();
         updateMoney();
         document.getElementById('scene20V1').style.display = 'block';
         document.getElementById('scene20Txt').style.display = 'none';
@@ -517,7 +518,7 @@
     document.getElementById('pizzaGo').addEventListener('click', function(){
         money -= 12;
         happiness += 5;
-        updateHappiness()
+        updateHappiness();
         grades -= 3;
         countGrades();
         updateMoney();
@@ -529,7 +530,7 @@
     document.getElementById('scene21Uber').addEventListener('click', function(){
         money -= 10;
         happiness += 2;
-        updateHappiness()
+        updateHappiness();
         updateMoney();
         document.getElementById('scene21V5').style.display = 'block';
         document.getElementById('scene21V4').style.display = 'none';
@@ -660,13 +661,5 @@
             document.getElementById('scene25').style.display = 'none';
         });
     }
-
-    
-
-    /*     document.getElementById('').addEventListener('click', function(){
-        document.getElementById('').style.display = 'block';
-        document.getElementById('').style.display = 'none';
-
-    }); */
 
 })();
