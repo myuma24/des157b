@@ -4,10 +4,19 @@ body {
 }
 
 
-Main {
-    margin-left: 33%;
-    margin-right: 33%;
+main {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 50px;
+    padding-top: 15px;
 }
+
+img {
+    object-fit: contain;
+    width: 30%;
+    height: auto;
+}
+
 
 main {
     font-family: "Lato", sans-serif;
@@ -45,6 +54,10 @@ p{
     background-color: #1f0b15;
     padding: 30px;
     justify-content: space-around;
+/*     position: fixed;
+    width: 33%;
+    top: 0; Aligns the top edge of the element with the top edge of the viewport
+    z-index: 1000; */
 }
 
 .phoneNotification {
@@ -122,6 +135,17 @@ button:hover {
     display: flex; flex-direction: row; justify-content: space-around;
 }
 
+#begin {
+    padding: 10px 30px 10px 30px  ;
+}
+
+#return {
+    padding: 10px 30px 10px 30px  ;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
 #beginMain {
     height: 100%;
     margin: 0;
@@ -138,4 +162,42 @@ button:hover {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+#resultsTxt, #resultsTxt2 {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#inforDisplay {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust the gap between grid items */
+    padding: 20px; /* Optional: Adds some space around the grid */
+    margin: auto;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#inforDisplay div {
+    background-color: #eb8d8d;
+    border-radius: 25px;
+    padding: 10px 30px 15px 30px;
+}
+
+#theFuture {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-bottom: 80px;
 }

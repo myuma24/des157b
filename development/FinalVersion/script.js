@@ -106,7 +106,7 @@
     });
 
     document.getElementById('scene3Eatout').addEventListener('click', function(){
-        money -= 23;
+        money -= 20;
         happiness += 8;
         document.getElementById('scene3Eatout1').style.display = 'block';
         document.getElementById('scene3Text2').style.display = 'none';
@@ -145,6 +145,15 @@
             document.getElementById('scene4').style.display = 'block';
         });
     }
+
+    document.getElementById('eatOutTip').addEventListener('click', function(){
+        money -= 3;
+        updateMoney();
+        document.getElementById('scene3V1').style.display = 'none';
+        document.getElementById('scene4').style.display = 'block';
+    });
+
+
 
     document.getElementById('buySnack').addEventListener('click', function(){
         happiness += 5;
@@ -211,6 +220,7 @@
     
     document.getElementById('delineAttend').addEventListener('click', function(){
         happiness -= 10;
+        updateHappiness();
         document.getElementById('7declineAttend').style.display = 'block';
         document.getElementById('scene7').style.display = 'block';
         document.getElementById('scene6').style.display = 'none';
@@ -221,6 +231,7 @@
         money -= 15;
         grades += 5;
         happiness += 5;
+        updateHappiness();
         countGrades();
         updateMoney();
         document.getElementById('scene7Part2').style.display = 'block';
@@ -564,6 +575,7 @@
 
     document.getElementById('pizzaDecline').addEventListener('click', function(){
         happiness -= 15;
+        updateHappiness();
         pizzaGo = false;
         document.getElementById('scene21V2').style.display = 'block';
         document.getElementById('scene21V1').style.display = 'none';
@@ -595,8 +607,12 @@
             document.getElementById('scene21').style.display = 'none';
             if (pizzaGo == true) {
                 document.getElementById('scene22V2').style.display = 'block';
+                grades -= 25;
+                countGrades();
             } else {
                 document.getElementById('scene22V1').style.display = 'block';
+                grades+=15;
+                countGrades();
             }
             document.getElementById('scene22Rent').innerHTML = `After class, you remember that this week you have to pay rent. You anxiously check your bank account and you see that you have $${money} left.`;
         });
@@ -631,23 +647,29 @@
     document.getElementById('scene24Cont').addEventListener('click', function(){
         money -= 200;
         updateMoney();
-        if (money > 700){
+        if (money > 799){
             document.getElementById('scene25').style.display = 'block';
             document.getElementById('scene25TxtEnough').style.display = 'block';
-            document.getElementById('scene25TxtEnough1').innerHTML = `You check your bank account. You have $${money} left and the rent is $700.00. You have just enough to make this months payment without the help of loans or begging your landlord.`;
+            document.getElementById('scene25TxtEnough1').innerHTML = `You check your bank account. You have $${money} left and the rent is $800.00. You have just enough to make this months payment without the help of loans or begging your landlord.`;
             document.getElementById('scene24').style.display = 'none';
         } else {
             document.getElementById('scene25').style.display = 'block';
             document.getElementById('scene25TxtNotEnough').style.display = 'block';
-            document.getElementById('scene25TxtEnough1').innerHTML = ` You check your bank account. You have $${money} left and the rent is $700.00. Even if you waited for next month's salary (in 5 more days), next month you would have the same problem again.`;
+            document.getElementById('scene25TxtNotEnoughTxt').innerHTML = ` You check your bank account. You have $${money} left and the rent is $800.00. Even if you waited for next month's salary (in 5 more days), next month you would have the same problem again.`;
             document.getElementById('scene24').style.display = 'none';
         }
     });
 
+
     document.getElementById('payRent').addEventListener('click', function(){
+        money -= 800;
+        updateMoney();
         document.getElementById('results').style.display = 'block';
+        document.getElementById('resultsTxt').innerHTML = `You finished the month with $${money}, ${happiness} happiness, and you have a ${grades}% in school.`;
         document.getElementById('dataBarStyle').style.display = 'none';
-        document.getElementById('scene25').style.display = 'scene25';
+        document.getElementById('scene25').style.display = 'none';
+
+        document.getElementById('resultsTxt2').innerHTML = `You were able to make ends meet! You still have $${money} but fear it may not be enough to make it to next month. You begin to think about all the things you can cut out to keep your budget costs low.`;
     });
 
 
@@ -656,40 +678,57 @@
         updateMoney();
         document.getElementById('TaketheLoan').style.display = 'block';
         document.getElementById('TaketheLoanTxt').innerHTML = `With just a couple of clicks, the money comes into your account. It makes you happy to see $${money} in your account. You quickly pay this month's rent to the owner and make ends meet.`;
-        document.getElementById('scene25Txt').style.display = 'none';
-
+        document.getElementById('scene25TxtNotEnough').style.display = 'none';
     });
 
     document.getElementById('takeloan2').addEventListener('click', function(){
         money += 1200;
         updateMoney();
         document.getElementById('TaketheLoan').style.display = 'block';
+        document.getElementById('TaketheLoanTxt').innerHTML = `With just a couple of clicks, the money comes into your account. It makes you happy to see $${money} in your account. You quickly pay this month's rent to the owner and make ends meet.`;
         document.getElementById('scene25LessThanHalf').style.display = 'none';
 
     });
 
     document.getElementById('waitforpaycheck').addEventListener('click', function(){
-        if (money > 350){
-            money -= 350;
-            updateMoney();
+        if (money > 700){
             document.getElementById('scene25MoreThanHalf').style.display = 'block';
             document.getElementById('scene25TxtNotEnough').style.display = 'none';
-        }else {
+        } else {
             document.getElementById('scene25LessThanHalf').style.display = 'block';
             document.getElementById('scene25TxtNotEnough').style.display = 'none';
-    
         }
     });
 
-    var scene25Cont = document.getElementsByClassName('scene25Cont');
-    for (var i = 0; i < scene25Cont.length; i++) {
-        scene25Cont[i].addEventListener('click', function() {
-            document.getElementById('results').style.display = 'block';
-            document.getElementById('resultsTxt').innerHTML = `You finished the month with $${money}, ${happiness} happiness, and you have a ${grades} in school.`;
-            document.getElementById('dataBarStyle').style.display = 'none';
-            document.getElementById('scene25').style.display = 'scene25';
-        });
-    }
+    document.getElementById('scene25RentCont').addEventListener('click', function(){
+        money = 0;
+        updateMoney();
+        document.getElementById('results').style.display = 'block';
+        document.getElementById('resultsTxt').innerHTML = `You finished the month with $${money}, ${happiness} happiness, and you have a ${grades}% in school.`;
+        document.getElementById('dataBarStyle').style.display = 'none';
+        document.getElementById('scene25').style.display = 'none';
+
+        document.getElementById('resultsTxt2').innerHTML = `You were able to make ends meet but at what cost?. You'll have to wait for your next paycheck at the end of the month to repay your landlord. You hope you'll have enough to make it to next month.`;
+    });
+
+    document.getElementById('scene25LossCont').addEventListener('click', function(){
+        document.getElementById('results').style.display = 'block';
+        document.getElementById('resultsTxt').innerHTML = `You finished the month with $${money}, ${happiness} happiness, and you have a ${grades}% in school.`;
+        document.getElementById('dataBarStyle').style.display = 'none';
+        document.getElementById('scene25').style.display = 'none';
+        document.getElementById('resultsTxt2').innerHTML = `You lost your apartment and fear you will be unable to find another place to stay. You think about your choices and question what your next move should be. You start calling your friends and family to see if they have an couch you can sleep on for the future.`;
+    });
+
+    document.getElementById('scene25Cont').addEventListener('click', function(){
+        money -= 800;
+        updateMoney();
+        document.getElementById('results').style.display = 'block';
+        document.getElementById('resultsTxt').innerHTML = `You finished the month with $${money}, ${happiness} happiness, and you have a ${grades}% in school.`;
+        document.getElementById('dataBarStyle').style.display = 'none';
+        document.getElementById('scene25').style.display = 'none';
+
+        document.getElementById('resultsTxt2').innerHTML = `You were able to make ends meet but at what cost? You still have $${money} left but this is money in disguise that you will have to pay back to the bank. You pray you'll make it to the end of next month.`;
+    });
 
 
 

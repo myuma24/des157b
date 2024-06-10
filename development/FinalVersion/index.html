@@ -30,14 +30,13 @@
 </head>
 
 <body>
-
-    <main>
+    <header>
         <div id = "dataBarStyle" style="display: none;">
             <div id = "dataBar" >
               <span id="MoneyCount" aria-describedby="tooltip">
               </span>
               <div id="dataBarINFO" role="tooltip">
-                This amount is decided on your total income plus half of your income to allot for the previous month.
+                The beginning amount is decided on your total income plus half of your income to allot for the previous month.
                 <div id="arrow"></div>
               </div>
             </div>
@@ -53,16 +52,19 @@
               <span id="GradesCount" aria-describedby="tooltip">
               </span>
               <div id="dataGradesINFO" role="tooltip">
-                This factor is decided on the global average letter grade a college student gets. If you study, these grades will go up.
+                Your starting grade is decided on the global average letter grade a college student gets. If you study, these grades will go up.
                 <div id="gradesArrow"></div>
               </div>
             </div>
-          </div>
+        </div>
+    </header>
+
+    <main>
 
         <section id = "beginMain">
             <div id = "beginContent">
                 <h1>25 Days as a College Student</h1>
-                <p>As like all real life decisions and actions, they cannot be redone. Please think carefully through your choices before making them.</p>
+                <p>As like all real life decisions and actions, please think carefully through your choices before making them.</p>
                 <button id = "begin">Begin</button>
             </div>
         </section>
@@ -70,9 +72,7 @@
         <section id = "scene1" style="display: none;">
             <h1>Day 1 Monday</h1>
             <div id = "scene1Part1">
-                <div>
-                    <img src="images/2.png" alt = "1">
-                </div>
+                <img src = "images/you.png" alt = "you" style="width: 60%;">
                 <div>
                     <p>
                         This is you: Young, single, and no children living in good ol’ sunny California.
@@ -81,7 +81,7 @@
                         You’re a full-time college student with a part-time job that pays <span>$15 per hour</span>. This is California's minimum wage.
                     </p>
                     <p>
-                        You live in a small <span>studio apartment</span>. The average cost for housing alone in California is between $1,360 to $2,649 per month. You feel extremely lucky you were able to get your own place for only $700 a month. Even if it's only a couple of square meters, it is a bit far from campus, and the landlord requires rent on the 25th of every month.
+                        You live in a small <span>studio apartment</span>. The average cost for housing alone in California is between $1,360 to $2,649 per month. You feel extremely lucky you were able to get your own place for only $800 a month. Even if it's only a couple of square meters, it is a bit far from campus, and the landlord requires rent on the 25th of every month.
                     </p>
                     <button id = "scene1Phonering">Suddenly your phone rings</button>
                 </div>
@@ -106,7 +106,6 @@
             </div>
 
             <div id = "op1" style="display: none;">
-                <img src = "images/electricBill.png">
                 <p>
                     You decide to pay this bill immediately.
                 </p>
@@ -116,7 +115,6 @@
             </div>
 
             <div id = "op2" style="display: none;">
-                <img src = "images/electricBill.png">
                 <p> 
                     You set a reminder to pay it in two weeks.
                 </p>
@@ -128,6 +126,7 @@
             
         <section id = "scene2" style="display: none;">
             <h1>Day 2 Tuesday</h1>
+            <img src = "images/class.png" style="width: 70%;">
             <p id = "scene2Part1">
                 This is your college classroom and you just finished attending your last lecture. You’re very tired and want to take the bus home but you're behind on some assignments. Should you <button id = "scene2op1">stay behind and finish up your work</button> or <button  id = "scene2op2">head home early</button> ?
             </p>
@@ -174,7 +173,7 @@
                 You decline eating out with your friends, while disappointed they understand. You end the day and <button class = "scene3Cont">head home</button>.
             </p>
             <p id = "scene3Eatout1" style="display: none;">
-                You enjoy a nice meal with your friends. You haven't thought about tipping along with the cost of the meal, so you spent $23 in total. At least you feel rejuvenated. You <button class = "scene3Cont">go home and rest</button>.
+                You enjoy a nice meal with your friends. You haven't thought about tipping along with the cost of the meal, so you spent $23 in total. At least you feel rejuvenated. You <button id = "eatOutTip">go home and rest</button>.
             </p>
         </section>
 
@@ -183,10 +182,11 @@
                 Day 4 Thursday
             </h1>
             <div id = "scene4Text">
-                <img src = "images/snack.png" alt = "snack">
+
                 <p >
                     Today was a busier day but you returned home from your classes. 
-                </p>
+                </p>                
+                <img src = "images/snack.png" alt = "snack">
                 <p>
                     You remember to prepare lunch but realize you're out of food for the week, so you decide to go to the supermarket to buy groceries. You pick only the necessities until you spot <Span>your favorite snack for $6</Span>. You haven’t had it in a very long time however, <span>what you're currently carrying already costs $60</span>. 
                 </p>
@@ -208,6 +208,7 @@
             <p>
                 Today is Friday, and while you don’t have classes on Friday, you do have work. 
             </p>
+            <img src = "images/work.png" alt = "">
             <p>
                 According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours.
             </p>
@@ -221,13 +222,14 @@
 
         <section id = "scene6" style="display: none;">
             <h1>Day 6 Saturday</h1>
-            <img src = "images/chat.png" alt = "chat">
+            
             <p id = "">
                 You wake up and repeat what you did yesterday. You return home to have dinner.
             </p>
             <p>
                 While having dinner you get a text from your childhood friend.
             </p>
+            <img src = "images/chat.png" alt = "chat">
             <p>
                 <span class = "phoneNotification">Hey, I’m thinking of having a get-together for my birthday tomorrow!</span>
             </p>
@@ -251,6 +253,7 @@
                 <button id = "7Stay">Stay longer and get a ride home.</button> 
             </p>
             <div id = "scene7Part2"  style="display: none;">
+                <img src="images/MobilePlan.png" alt = "4">
                 <p>
                     You start getting ready for bed. Suddenly you get a notification on your phone.
                 </p>
@@ -276,6 +279,7 @@
                 Today is Monday. You notice some of your classmates are coughing and sneezing a lot but you keep working until the time to leave arrives. You should try to pass by the supermarket tonight.
                                 
             </p>
+            <img src = "images/food.png">
             <p>
                 At the supermarket you buy the same stuff you always do, stuff that's easy and fast to cook, so you don't have to spend too much time preparing your lunch every day. You buy more than you usually do in an attempt to avoid having to go back to the supermarket for a couple of days.
 
@@ -330,14 +334,19 @@
             <p id = "scene10BedOpt" style="display: none;">
                 You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe. Maybe it would be a good idea to <button class = "VisitDoc">visit the doctors.</button>
             </p>
+            <div id = "pharmacy" style = "display: none;">
+                <img src="images/meds.png">
+                <p>
+                    You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, <span>your total bill is $30</span>. You pay for the medicine and go back home to rest.
+
+                    The doctor told you to stay in bed tomorrow, you should be better in two days. 
+                    <button id = "scene10Cont">Continue</button>
+                </p>                
+
+            </div>
             
 
-            <p id = "pharmacy" style = "display: none;">
-                You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, <span>your total bill is $30</span>. You pay for the medicine and go back home to rest.
 
-                The doctor told you to stay in bed tomorrow, you should be better in two days. 
-                <button id = "scene10Cont">Continue</button>
-            </p>
         </section>
 
         <section id = "scene11" style="display: none;">
@@ -346,6 +355,7 @@
                 Today you need to rest in bed once again, but at least you feel a little better than yesterday. Suddenly you hear a notification from your phone. 
 
             </p>
+            <img src="images/Utility.png" alt = "utilities">
             <p>  
                 <span class = "phoneNotification">
                     “Dear tenants, here's the cost for this month's utilities: $20”
@@ -363,6 +373,7 @@
             <p id = "">
                 Today you go to work. You’re still feeling a bit weak but you can’t afford to rest for any more days. You're already worried about skipping class for 2 days, and you're unsure if there will be a chance to make up for those days. While you're focused on working, you notice that there's a notification on your phone.
             </p>
+            <img src="images/FwaterBill.png" alt = "waterBill">
             <p>
                 <span class = "phoneNotification">"Water Bill Total to be paid: $45"</span> 
             </p>
@@ -385,6 +396,7 @@
                 </p>
             </div>
             <div id = "scene13p2" style="display: none;">
+                <img src="images/granny.png" alt = "1">
                 <p>
                     Once you're home you notice you have a missed call from your grandma. You have a lot of assignments and work to do and you know that conversations with your grandma can last hours. 
                 </p>
@@ -412,13 +424,19 @@
                 </p>
             </div>
 
-            <p id = "Tscene14Talking" style="display: none;">
-                It's the next day and you arrive at your grandma's house. As always, your grandma welcomes you with delicious food, made with a lot of effort. You both have a <button id = "scene14Talk">good talk for a while.</button>              
-            </p>
+            <div id = "Tscene14Talking" style="display: none;">
+                <img src = "images/grannyVisit.png">
+                <p>
+                    It's the next day and you arrive at your grandma's house. As always, your grandma welcomes you with delicious food, made with a lot of effort. You both have a <button id = "scene14Talk">good talk for a while.</button>              
+                </p>                
+            </div>
+
+
             <div id = "scene14P1" style="display: none;">
                 <p>
                     After you're done eating, you insist on helping clean up, you know she's tired too.                
                 </p>
+                <img src = "images/money.png">
                 <p>
                     While you're getting ready to go back home, your grandma takes out her purse. She hands you a $100.00 bill. She says "It might not be much, but I hope it helps you." 
                 </p>
@@ -440,7 +458,7 @@
 
         <section id = "scene15" style="display: none;">
             <h1>Day 15 Monday </h1>
-            <img src = "images/chat.png" alt = "chat">
+            
             <p id = "scene15Intro">
                 
             </p>
@@ -453,6 +471,7 @@
             <p>
                 <span class = "phoneNotification">“Do you want to get lunch with me tomorrow after class? My treat!”</span>
             </p>
+            <img src = "images/chat.png" alt = "chat">
             <p id = "">
                 You contemplate the invite. You’ll get a free meal but you are unsure how long you’ll be staying out and how you’ll get home. You also have quite a lot of assignments piled up thanks to the illness you caught a few days ago. 
             </p>
@@ -494,6 +513,7 @@
         <section id = "scene17" style="display: none;">
             <h1>Day 17 Wednesday </h1>
             <div id = "scene17v1">
+                <img src = "images/class.png" style="width: 70%;">
                 <p>
                     You're focusing on your work in class. The atmosphere feels a bit tense but you continue your work. You overhear your classmates discussing not being able to keep up with the course load and they fear they may be academically dismissed for bad grades.
                 </p>
@@ -512,6 +532,7 @@
 
         <section id = "scene18" style="display: none;">
             <h1>Day 18 Thursday </h1>
+            <img src = "images/class.png" style="width: 70%;">
             <p>
                 Today, you just have class. It goes by smoothly with no issues.
             </p>
@@ -534,18 +555,25 @@
                 <p>
                     After waiting for several minutes, the bus finally came and you made it to work. You're 20 minutes late. Maybe it's not that much, but you feel that you could get fired for any reason or have your pay deducted. 
                 </p>
+                <img src = "images/work.png">
                 <p>
                     You try to go unnoticed and quickly you get to your workspace to work focused until the <button class = "scene19Cont">end of the day</button>.
                 </p>
             </div>
-            <p id = "uberTxt" style="display: none;">
-                You arrive at work on time and <button class = "scene19Cont">work goes smoothly</button>.
-            </p>
+            <div id = "uberTxt" style="display: none;">
+                <img src = "images/work.png">
+
+                <p>
+                    You arrive at work on time and <button class = "scene19Cont">work goes smoothly</button>.
+                </p>                
+            </div>
+
         </section>
 
         <section id = "scene20" style="display: none;">
             <h1>Day 20 Saturday</h1>
             <div id = "scene20Txt">
+                <img src = "images/food.png" alt = "food">
                 <p>
                     After work you go to the super market. At the market, there are many fruits and veggies you'd like to buy, but you know that if you take too many they might spoil.
                 </p>
@@ -586,6 +614,7 @@
                 <p>
                     You tell your friends that you don't think you can go and thank them for the invitation anyway. Some minutes later, you get a private message from one of your friends.                     
                 </p>
+                <img src="images/chat.png" alt = "chat">
                 <p>
                     <span class = "phoneNotification">"Hey if it's because of money issues, I can pay for your bill. We would love to hang out with you again."</span>
                 </p>
@@ -609,12 +638,21 @@
 
         <section id = "scene22" style="display: none;">
             <h1>Day 22 Monday</h1>
-            <p id = "scene22V1" style="display: none;">
-                Today is the big test and you think you did well thanks to the studying you did last night.
-            </p>
-            <p id = "scene22V2" style="display: none;">
-                Today is the big test and you aren’t confident in how well you did but you did your best. Maybe you should’ve studied a bit more.
-            </p>
+            <div id = "scene22V1" style="display: none;">
+                <img src="images/pass.png">
+                <p>
+                    Today is the big test and you think you did well thanks to the studying you did last night.
+                </p>                
+            </div>
+
+            <div>
+                <img src="images/fail.png">
+                <p id = "scene22V2" style="display: none;">
+                    Today is the big test and you aren’t confident in how well you did but you did your best. Maybe you should’ve studied a bit more.
+                </p>                
+            </div>
+
+
             <p id = "scene22Rent">
 
             </p>
@@ -632,6 +670,7 @@
                 <p>
                     It’s Wednesday and you're checking your phone. After reading your emails, you notice you just got a mail about your gas bill.
                 </p>
+                <img src="images/Gas.png" alt = "1">
                 <p>
                     <span class = "phoneNotification">“New Notification - Gas Bill Total to be paid: $22.00”</span>.
                 </p>
@@ -646,9 +685,9 @@
         </section>
         <section id = "scene24" style="display: none;">
             <h1>Day 24 Wednesday </h1>
+            <img src="images/studentBill.png" alt = "studentBill">
             <p>
-                Tomorrow is the last day to pay your rent. While you browse your phone you remember that you haven't paid your <span>student debt</span> this month which is $200.
-
+                Tomorrow is the last day to pay your rent. While you browse your phone you remember that you haven't paid your <span>student debt this month which is $200</span>.
             </p>
             <p id = "scene24Txt">
                 Student loan debt in the United States surpassed $1.7 trillion in 2021, with approximately 45 million borrowers, according to the Federal Reserve and the Department of Education. In the United States, around 60% of undergraduate students graduate with some form of debt, according to data from the National Center for Education Statistics. The average student loan payment is between $200 and $299 per month.
@@ -679,7 +718,7 @@
                 <p>
                     Today is the last day you can pay your rent on time, and you don't want to have problems with the landlord who has given you the opportunity to rent this place for such a low cost. You know that it would be really easy for him to kick you out and find a new tenant.                    
                 </p>
-                <p id = "scene25TxtNotEnough">
+                <p id = "scene25TxtNotEnoughTxt">
 
                 </p>
                 <p>
@@ -694,10 +733,10 @@
 
             <div id = "scene25LessThanHalf" style="display: none;">
                 <p>
-                    You try and reason with your landlord. You tried to offer what you had left in your bank account. While he seemed empathetic, he expresses how he can no longer accept anymore late payments.
+                    You try and reason with your landlord. You tried to offer what you had left in your bank account. While he seemed empathetic, he expresses how he can no longer accept anymore late payments. He requests you vacate the apartment by the end of the month if you can't pay it all off in time.
                 </p>
                 <button id = "takeloan2">Take the loan and pay rent in full.</button>
-                <button class = "scene25Cont">Continue</button>
+                <button id = "scene25LossCont">Continue</button>
             </div>
 
 
@@ -705,7 +744,7 @@
                 <p>
                     You try and reason with your landlord. You had enough to cover a majority of rent and you will give him the rest at the end of the month. He sighs feeling empathetic and accepts your proposal. He gives you a final warning that he wouldn't be so nice next time. You're just happy you were able to make ends meet.
                 </p>   
-                <button class = "scene25Cont">Continue</button>            
+                <button id = "scene25RentCont">Continue</button>            
             </div>
 
 
@@ -723,17 +762,65 @@
                 <p>
                     You decide to go to bed so you don't have to think about it. At least you still have your little apartment and you haven't lost faith that someday you’ll be debt and worry-free.
                 </p>
-                <button class = "scene25Cont">Continue</button>
+                <button id = "scene25Cont">Continue</button>
             </div>
 
         </section>
-
-        <section id = "results" style="display: none;">
-            <p  id = "resultsTxt">
-
-            </p>
-        </section>
     </main>
+    <section id = "results" style="display: none;">
+        <h1  id = "resultsTxt">
+
+        </h1>
+        <p id = "resultsTxt2">
+
+        </p>
+
+        <div id = "inforDisplay">
+            <div>
+                <h2>Mental Health:</h2>
+                <p id = "MentalHealthTxt">
+                    
+                    The mental health crisis among college students is a pressing issue, exacerbated by the COVID-19 pandemic. According to recent studies, approximately 60% of college students have reported experiencing anxiety, while 48% have struggled with depression. The transition to online learning, social isolation, and uncertainty about the future have significantly contributed to these statistics. Additionally, the lack of adequate mental health resources on many campuses further complicates the issue. Long waiting times for counseling services and a shortage of mental health professionals leave many students without the support they desperately need.
+                </p>
+            </div>
+
+            <div>
+                <h2>Cost of Living:</h2>
+                <p id = "CostofLivingTxt">
+                    
+                    The rising cost of living is another major concern for college students. Tuition fees, housing, textbooks, and everyday expenses have seen a significant increase over the past decade. A survey conducted by the National College Health Assessment revealed that nearly 70% of students experience stress related to financial concerns. This financial burden often forces students to work part-time or even full-time jobs, which can detract from their academic performance and overall college experience. The increasing cost of living not only affects students’ academic success but also their mental well-being, creating a vicious cycle of stress and anxiety.
+                </p>                
+            </div>
+
+            <div>
+                <h2>Student Debt:</h2>
+                <p id = "StudentDebtTxt">
+                    
+                    Student debt has become a national crisis, with the total student loan debt in the United States surpassing $1.7 trillion. More than 45 million borrowers are struggling to manage their student loans, with the average debt per borrower being approximately $37,000. This overwhelming financial burden impacts students’ mental health and future financial stability, often delaying major life decisions such as buying a home or starting a family. The heavy debt load also influences career choices, with many graduates opting for higher-paying jobs over those in public service or non-profit sectors.
+                </p>                
+            </div>
+
+            <div>
+                <h2>Grades and Academic Performance:</h2>
+                <p id = "Academics">
+                    
+                    The interplay between mental health, financial stress, and academic performance is evident. Students dealing with mental health issues or financial stress often see a decline in their grades. According to a report by the American College Health Association, students who reported financial stress were more likely to experience academic difficulties, with 25% stating that financial concerns had negatively impacted their grades. Furthermore, mental health challenges can lead to decreased concentration, lower energy levels, and reduced motivation, all of which contribute to poorer academic outcomes.
+                </p>                
+            </div>
+        </div>
+
+
+        <div id = "theFuture">
+            <h2>How Do You Imagine the Future of Education?</h2>
+            <p>
+                Considering the current challenges, how do you imagine the future of education will evolve? Do you think these issues will persist, or is there hope for improvement? Will technological advancements and policy changes create a more supportive and equitable environment for students, or will the pressures of mental health, financial burdens, and academic performance continue to intensify? Your perspective on the future of education can help shape a vision for a system that better supports the needs of all students.
+            </p>        
+            <button id = "return" type="button" onClick="window.location.reload();">Return</button>
+
+        </div>
+
+
+    </section>
 
     <script type="module">
         import {
