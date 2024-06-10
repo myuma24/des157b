@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Days as a College Student</title>
+
+        <!-- Normalize CSS for browser compatability -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+        <!-- Add link to any google fonts used here -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+        <!-- My Script -->
+        <script src="script.js" defer></script>
+    
+        <!-- My Styles -->
+        <link href="styles.css" rel="stylesheet">
+    
+        <!-- Meta tag for mobile support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+        <div id = "dataBarStyle" style="display: none;">
+            <div id = "dataBar" >
+              <span id="MoneyCount" aria-describedby="tooltip">
+              </span>
+              <div id="dataBarINFO" role="tooltip">
+                This amount is decided on your total income plus half of your income to allot for the previous month.
+                <div id="arrow"></div>
+              </div>
+            </div>
+            <div id = "dataHealth" >
+              <span id="HealthCount" aria-describedby="tooltip">
+              </span>
+              <div id="dataHealthINFO" role="tooltip">
+                Your choices will affect your happiness level. Just make sure it doesn't fall too low.
+                <div id="healthArrow"></div>
+              </div>
+            </div>
+            <div id = "dataGrades">
+              <span id="GradesCount" aria-describedby="tooltip">
+              </span>
+              <div id="dataGradesINFO" role="tooltip">
+                This factor is decided on the global average letter grade a college student gets. If you study, these grades will go up.
+                <div id="gradesArrow"></div>
+              </div>
+            </div>
+          </div>
+
+        <section id = "beginMain">
+            <div id = "beginContent">
+                <h1>25 Days as a College Student</h1>
+                <p>As like all real life decisions and actions, they cannot be redone. Please think carefully through your choices before making them.</p>
+                <button id = "begin">Begin</button>
+            </div>
+        </section>
+
+        <section id = "scene1" style="display: none;">
+            <h1>Day 1 Monday</h1>
+            <div id = "scene1Part1">
+                <div>
+                    <img src="images/2.png" alt = "1">
+                </div>
+                <div>
+                    <p>
+                        This is you: Young, single, and no children living in good ol’ sunny California.
+                    </p>
+                    <p>
+                        You’re a full-time college student with a part-time job that pays <span>$15 per hour</span>. This is California's minimum wage.
+                    </p>
+                    <p>
+                        You live in a small <span>studio apartment</span>. The average cost for housing alone in California is between $1,360 to $2,649 per month. You feel extremely lucky you were able to get your own place for only $700 a month. Even if it's only a couple of square meters, it is a bit far from campus, and the landlord requires rent on the 25th of every month.
+                    </p>
+                    <button id = "scene1Phonering">Suddenly your phone rings</button>
+                </div>
+                
+
+            </div>
+
+            <div id = "scene1Part2" style="display: none;">
+                <img src = "images/electricBill.png">
+                <p>
+                      You have a new notification:
+                </p>
+                <p>
+                    <span class = "phoneNotification">Electric Bill: Total to be paid by the end of the month: $90</span>
+                </p>
+                <p>
+                    The average electric bill for a 1 bedroom apartment in California is likely to be $138 per month but you are good at saving electricity so your electric bill is lower than the average.
+                </p>
+                <p>
+                    You can pay this bill <button id = "scene1op1">immediately</button> or <button id = "scene1op2">delay it</button> for two weeks and get a reminder for it later.<br>
+                </p>
+            </div>
+
+            <div id = "op1" style="display: none;">
+                <img src = "images/electricBill.png">
+                <p>
+                    You decide to pay this bill immediately.
+                </p>
+                <p>
+                    Tomorrow you have class so you  <button class = "Scene1Continue">go to bed early</button>.
+                </p>
+            </div>
+
+            <div id = "op2" style="display: none;">
+                <img src = "images/electricBill.png">
+                <p> 
+                    You set a reminder to pay it in two weeks.
+                </p>
+                <p>
+                    Tomorrow you have class so you  <button class = "Scene1Continue">go to bed early</button>.
+                </p>
+            </div>
+        </section>
+            
+        <section id = "scene2" style="display: none;">
+            <h1>Day 2 Tuesday</h1>
+            <p id = "scene2Part1">
+                This is your college classroom and you just finished attending your last lecture. You’re very tired and want to take the bus home but you're behind on some assignments. Should you <button id = "scene2op1">stay behind and finish up your work</button> or <button  id = "scene2op2">head home early</button> ?
+            </p>
+            <p id = "2op1" style="display: none;">
+                The assignment took longer than you thought, but you have some free time tomorrow. You go ahead and take the bus home.
+
+                <button id = "2Next1">Tomorrow will be a better day</button> 
+            </p>
+            <p id = "2op2" style="display: none;">
+                You decide to postpone your assignment and head home to rest early.
+
+                <button id = "2Next2">Tomorrow will be a better day</button>
+            </p>
+        </section>
+
+        <section id = "scene3V2" style="display: none;">
+            <h1>Day 3 Wednesday</h1>
+            <p id = "scene3V2TxT">
+                Today you have fewer classes. Because you were so tired yesterday you forgot to pack lunch. Your classmates invite you to go have lunch with them. You know socializing will benefit your <span id = "mentalHealth">mental health</span>.
+            </p>
+            <p id = "scene3V2TxTInfo">
+                According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons. According to the American College Health Association's National College Health Assessment, mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year.
+            </p>
+            <p id = "">
+                Unfortunately, since you didn't finish your assignment yesterday, you're behind in class. You decline their offer, you’ll eat something once you arrive home. You have to get back to doing your work.<button class = "scene3Cont">Continue</button>
+            </p>
+        </section>
+
+        <section id = "scene3V1" style="display: none;">
+            <h1>Day 3 Wednesday</h1>
+            <p id = "scene3Text">
+                Today you have fewer classes. Because you were so tired yesterday you forgot to pack lunch. Your classmates invite you to go have lunch with them. You know socializing will be good for your <span>mental health</span>.
+            </p>
+            <p id = "scene3Text2">
+                According to a study published in the Journal of Consulting and Clinical Psychology, around 64% of students who dropped out of college did so due to mental health-related reasons. According to the American College Health Association's National College Health Assessment, mental health issues are prevalent among college students, with about 39% reporting feeling so depressed that it was difficult to function, and 61% reporting feeling overwhelming anxiety within the past year.
+            </p>
+            <p id = "scene3Choices">
+                <button id = "scene3Eatout">Eating out</button> will cost you $20, an alternative would be to <button id = "scene3Sandwhich">buy yourself a sandwich</button>  for $10 at the market or wait and <button id = "scene3Decline"> eat something at home</button>.
+            </p>
+            <p id = "scene3Sandwhich1" style="display: none;">
+                After eating your sandwich you head to the rest of your classes. You cannot wait to <button class = "scene3Cont">go home and rest</button>. 
+            </p>
+            <p id = "scene3Decline1" style="display: none;">
+                You decline eating out with your friends, while disappointed they understand. You end the day and <button class = "scene3Cont">head home</button>.
+            </p>
+            <p id = "scene3Eatout1" style="display: none;">
+                You enjoy a nice meal with your friends. You haven't thought about tipping along with the cost of the meal, so you spent $23 in total. At least you feel rejuvenated. You <button class = "scene3Cont">go home and rest</button>.
+            </p>
+        </section>
+
+        <section id = "scene4" style="display: none;">
+            <h1>
+                Day 4 Thursday
+            </h1>
+            <div id = "scene4Text">
+                <img src = "images/snack.png" alt = "snack">
+                <p >
+                    Today was a busier day but you returned home from your classes. 
+                </p>
+                <p>
+                    You remember to prepare lunch but realize you're out of food for the week, so you decide to go to the supermarket to buy groceries. You pick only the necessities until you spot <Span>your favorite snack for $6</Span>. You haven’t had it in a very long time however, <span>what you're currently carrying already costs $60</span>. 
+                </p>
+                <p>             
+                    On average, groceries cost between $290 to $548 per month for one person. If we divide $290 by four, you get about $72.50 per week.
+                </p>
+                <p>
+                    Do you <button id = "buySnack">buy the snack</button> or <button id = "DontbuySnack">only what you need?</button>
+                </p>
+            </div>
+
+            <p id = "scene4Continued" style="display: none;">
+                You're back home. You leave your lunch ready for tomorrow and <button id = "scene4Continue">go to bed</button> .
+            </p>
+        </section>
+
+        <section id = "scene5" style="display: none;">
+            <h1>Day 5 Friday </h1>
+            <p>
+                Today is Friday, and while you don’t have classes on Friday, you do have work. 
+            </p>
+            <p>
+                According to the National Center for Education Statistics, about 43% of full-time undergraduate students in the United States work while enrolled in college. The average hours a full-time student works ranges between 10 to 36 hours.
+            </p>
+            <p>
+                You work on Fridays and Saturdays for 8 hours each day and get paid at the end of the month. Totaling 16 hours per week and a $960 paycheck. 
+            </p>
+            <p>
+                After finishing your shift you return home. <button id = "scene5Continue">Tomorrow is the weekend.</button>  
+            </p>
+        </section>
+
+        <section id = "scene6" style="display: none;">
+            <h1>Day 6 Saturday</h1>
+            <img src = "images/chat.png" alt = "chat">
+            <p id = "">
+                You wake up and repeat what you did yesterday. You return home to have dinner.
+            </p>
+            <p>
+                While having dinner you get a text from your childhood friend.
+            </p>
+            <p>
+                <span class = "phoneNotification">Hey, I’m thinking of having a get-together for my birthday tomorrow!</span>
+            </p>
+            <p>
+                Should you attend?
+                <button id = "attend30">Attend and bring a gift ($30)</button>
+                <button id = "attend10">Attend and get a small gift ($10)</button>
+                <button id = "attend">Attend without a gift.</button>
+                <button id = "delineAttend">Say you can’t make it.</button>
+            </p>
+        </section>
+
+        <section id = "scene7" style="display: none;">
+            <h1>Day 7 Sunday </h1>
+            <p id = "7declineAttend"  style="display: none;" >
+                You declined your friend's invitation and said you were busy. Your friend is disappointed but they understand. You don’t have anything else planned today so you <button id = "7Home">stay home and study.</button>  
+            </p>
+            <p id = "7attend"  style="display: none;">
+                You arrive at the event. After having a tough week, you feel much better after seeing your friends. It’s getting late and you still have homework to do. Should you leave early with an Uber or stay a bit longer to get a ride home?
+                <button id = "7Uber">Get a Uber (-$15)</button> 
+                <button id = "7Stay">Stay longer and get a ride home.</button> 
+            </p>
+            <div id = "scene7Part2"  style="display: none;">
+                <p>
+                    You start getting ready for bed. Suddenly you get a notification on your phone.
+                </p>
+                <p>
+                    <span class = "phoneNotification">“Your mobile plan is about to expire. You can renew your plan online at anytime.”</span> <br>
+                </p>
+                <p>
+                    $10 is the cheapest mobile plan you could find with unlimited talk, text, and 1GB of data. 
+                </p>
+                <p>
+                    The national average mobile plan is about $144 a month but if you know what you need, mobile plans can be as cheap as $7 per month for a single line.
+                </p>
+                <p>
+                    After renewing your mobile plan you decide to work on some homework until you <button id = "7Continue">fall asleep</button>.
+                </p>
+            </div>
+
+        </section>
+
+        <section id = "scene8" style="display: none;">
+            <h1>Day 8 Monday </h1>
+            <p>
+                Today is Monday. You notice some of your classmates are coughing and sneezing a lot but you keep working until the time to leave arrives. You should try to pass by the supermarket tonight.
+                                
+            </p>
+            <p>
+                At the supermarket you buy the same stuff you always do, stuff that's easy and fast to cook, so you don't have to spend too much time preparing your lunch every day. You buy more than you usually do in an attempt to avoid having to go back to the supermarket for a couple of days.
+
+            </p>
+            <p id = ""> 
+                You go to pay and the cost is <span>$80 in total</span>. It's more than what you expected, but there isn't anything you could take out. You pay then <button id = "scene8Continue">go home and rest</button> .
+            </p>
+        </section>
+
+        <section id = "scene9" style="display: none;">
+            <h1>Day 9 Tuesday</h1>
+            <p>
+                Today is Tuesday most of your classmates are still out sick.
+                You try to be careful not to catch something. You fear that if you get sick you might have to stay in bed and you’ll struggle trying to makeup school work.
+            </p>
+            <p id = "">
+                You keep working for the rest of the day without socializing that much until it's time to leave. On your way home you saw many people sneezing and coughing. You hope you don’t catch anything. After you get home, you go <button id = "scene9Continue">straight to bed</button>.
+            </p>
+        </section>
+        <section id = "scene10" style="display: none;">
+            <h1>Day 10 Wednesday </h1>
+            <div id = "scene10Prompt">
+                <p>
+                    Your alarm rings. You feel like death. You feel weak, your head hurts, and your eyesight is fuzzy. You wonder if you caught the same thing your classmates have.
+                </p>
+                <p>
+                    You think that maybe it might be a good idea to stay in bed today, but you know that it will affect your grades. If you go to class you may feel worse but your grades won't tank. The other option is to go to the doctors, but you will have to co-pay $100 and some extra for the cost of medication. You get health insurance from your tuition but it unfortunately does not cover everything. 
+                </p>
+                <p>
+                    What will you do?<br><button id = "scene10Class">Go to class anyway.</button><br><button id = "scene10Rest">Rest in bed.</button><br><button id = "scene10Doctor">Go see a doctor (-$100).</button>
+                </p>
+            </div>
+            
+            <p id = "scene10ClassOpt" style="display: none;">
+                A few hours after you arrive, your coughing gets worse and one of your Professors notices. They advise you not to come to the class until you get better and to go see a doctor. You pick up your stuff and go back home.
+                You feel worse by the minute. Maybe it would be a good idea to <button class = "VisitDoc">visit the doctor</button>.
+            </p>
+            <div id = "scene10DocOpt"style="display: none;">
+                <p>
+                    With a bit of difficulty, you made it to the doctor's office. You've been sweating and coughing a lot. Your headache is worse.
+
+                </p>
+                <p>
+                    The doctor takes your temperature and sees you're a little feverish. He indicates to rest in bed for today and tomorrow. He gives you a prescription for cough syrup and painkillers.
+                </p>
+                <p>
+                    You ask if you have to buy the medicine and he insists that it will make you feel a lot better and recover quickly.
+                    <button id = "pharmacyOpt">Go to the pharmacy</button>
+                </p>
+            </div>
+            
+            <p id = "scene10BedOpt" style="display: none;">
+                You stay in bed. You feel your headache is getting worse. You feel dizzy and you're sweating. You find it difficult to breathe. Maybe it would be a good idea to <button class = "VisitDoc">visit the doctors.</button>
+            </p>
+            
+
+            <p id = "pharmacy" style = "display: none;">
+                You arrive at the pharmacy. You show the receipt to the seller. Between the cough syrup and painkillers, <span>your total bill is $30</span>. You pay for the medicine and go back home to rest.
+
+                The doctor told you to stay in bed tomorrow, you should be better in two days. 
+                <button id = "scene10Cont">Continue</button>
+            </p>
+        </section>
+
+        <section id = "scene11" style="display: none;">
+            <h1>Day 11 Thursday </h1>
+            <p id = "">
+                Today you need to rest in bed once again, but at least you feel a little better than yesterday. Suddenly you hear a notification from your phone. 
+
+            </p>
+            <p>  
+                <span class = "phoneNotification">
+                    “Dear tenants, here's the cost for this month's utilities: $20”
+                </span>   
+
+            </p>
+            <p> 
+                You review the document. It's the same amount you pay each month.
+                
+                <button id = "scene11Cont">You pay the bill</button> and keep resting for the rest of the day.
+            </p>
+        </section>
+        <section id = "scene12" style="display: none;">
+            <h1>Day 12 Friday</h1>
+            <p id = "">
+                Today you go to work. You’re still feeling a bit weak but you can’t afford to rest for any more days. You're already worried about skipping class for 2 days, and you're unsure if there will be a chance to make up for those days. While you're focused on working, you notice that there's a notification on your phone.
+            </p>
+            <p>
+                <span class = "phoneNotification">"Water Bill Total to be paid: $45"</span> 
+            </p>
+            <p>
+                California's average water bills are the second highest in the US at $77 a month but you’re good at conserving water and only pay $45.
+            </p>
+            <p>
+                You proceed to make the transfer and put your phone away. You spend the rest of the day relaxing until you <button id = "scene12Cont">fall asleep</button>.
+            </p>
+        </section>
+        <section id = "scene13" style="display: none;">
+            <h1>Day 13 Saturday </h1>
+            <div id = "scene13p1" >
+                <img src = "images/laundry.png" alt = "laundry">
+                <p>
+                    Today while getting ready for work, you realize that there are almost no clean clothes for the next week. You don't have a washing machine in your apartment, so you need to go to the laundromat after work.
+                </p>
+                <p>
+                    You buy a token for the washing machine and another for the drying machine, spending <button id = "scene13$">$4.00 in total</button>. 
+                </p>
+            </div>
+            <div id = "scene13p2" style="display: none;">
+                <p>
+                    Once you're home you notice you have a missed call from your grandma. You have a lot of assignments and work to do and you know that conversations with your grandma can last hours. 
+                </p>
+                <p>           
+                  Do you <button id = "scene13Call">call her back</button> or <button id = "scene13ignoreCall">just call her when you have more time</button>?
+                </p>                
+            </div>
+
+            <p id = "scene13ignore" style="display: none;">
+                You ignore her call and focus on school assignments and work related items instead. You wonder what your grandma called for but you push the thought to the side and continue working for the <button id = "scene13Cont">rest of the day</button>.
+            </p>
+
+            <p id = "scene13CallBack" style = "display: none;">                
+                Your grandma answers, she asks how you've been and if you need anything. You tell her you’re doing well to not worry her. After a few minutes, she asks you if you would come by for lunch tomorrow. Even though you're tired and have a lot of work, you tell her <button id = "scene13Visit">you will visit tomorrow</button>.
+            </p>
+        </section>
+        <section id = "scene14" style="display: none;">
+            <h1>Day 14 Sunday </h1>
+            <div id = "scene14Chill" style="display: none;">
+                <p>
+                    You have nothing planned today, you decide to return your grandma's call. She sounded a bit sad on the phone, saying she wanted to spend time with you but its too late now. You apologize for ignoring her call. You were busy and she understands. 
+                </p>
+                <p>
+                    You promise you will have lunch with her the next time you are free. Whenever that will be... she's old and won't be around waiting for you forever. <button class = "scene14Cont">You end the day.</button>
+                </p>
+            </div>
+
+            <p id = "Tscene14Talking" style="display: none;">
+                It's the next day and you arrive at your grandma's house. As always, your grandma welcomes you with delicious food, made with a lot of effort. You both have a <button id = "scene14Talk">good talk for a while.</button>              
+            </p>
+            <div id = "scene14P1" style="display: none;">
+                <p>
+                    After you're done eating, you insist on helping clean up, you know she's tired too.                
+                </p>
+                <p>
+                    While you're getting ready to go back home, your grandma takes out her purse. She hands you a $100.00 bill. She says "It might not be much, but I hope it helps you." 
+                </p>
+                <p>
+                    You know that this is a big sacrifice for her, considering her pension. Do you <button id = "scene14TakeBill">take the bill</button> or do you <button id = "scene14DeclineBill">tell her that it's not necessary</button>?
+                </p>
+            </div>
+
+            <p id = "scene14P1v1" style="display: none;">
+                Feeling a little guilty but you take the bill and thank your grandma. You need it, and it's so nice to know she worries about you. She feels relieved for having helped you out. You give her a big hug and you <button class = "scene14Home">go back home</button>.
+            </p>
+            <p id = "scene14P1v2" style="display: none;">
+                You thank your grandma but tell her you're okay. If you ever need help you will tell her. She gives you a big hug and you <button class = "scene14Home">go back home</button>.
+            </p>
+            <p id = "scene14P1v3" style="display: none;">
+                You take the bus home. While it’s free for students, it was a long bus ride. After more than an hour, you're back home. You make your lunch for tomorrow and <button class = "scene14Cont">go to sleep</button>.  
+            </p>
+        </section>
+
+        <section id = "scene15" style="display: none;">
+            <h1>Day 15 Monday </h1>
+            <img src = "images/chat.png" alt = "chat">
+            <p id = "scene15Intro">
+                
+            </p>
+            <p>
+                 In 15 more days, you'll be paid $960.00.
+            </p>
+            <p>
+                 You then get a notification on your phone. You get a text from one of your friends.
+            </p>
+            <p>
+                <span class = "phoneNotification">“Do you want to get lunch with me tomorrow after class? My treat!”</span>
+            </p>
+            <p id = "">
+                You contemplate the invite. You’ll get a free meal but you are unsure how long you’ll be staying out and how you’ll get home. You also have quite a lot of assignments piled up thanks to the illness you caught a few days ago. 
+            </p>
+            <p>
+                Should you push them to the side and <button id = "scene15Lunch">get lunch with your friend</button> or <button id = "scene15Assignments">work on your assignments</button>? 
+            </p>
+        </section>
+        <section id = "scene16" style="display: none;">
+            <h1>Day 16 Tuesday </h1>
+            <div id = "scene16v1" style="display: none;">
+                <p>
+                    You declined the offer of going out to eat lunch. You eat lunch by yourself, at least you’re all caught up with your assignments now. You ask yourself if you could've gone out to eat with them, but you're never sure if you'll make it to the end of the month.
+                </p>
+                <p>
+                    After finishing up what you needed to do for the day, <button class = "scene16Cont">you go to bed</button>.
+                </p>
+            </div>
+            <div id = "scene16v2" style="display: none;">
+                <p>
+                    You chose to go have lunch with your friend. 
+                </p>
+                <p>
+                    You like this restaurant very much. Your favorite dish costs $22. You check the menu and see the cheapest dish they have is a $12 sandwich. You may be hungry afterward but feel guilty for ordering something expensive. Will you ask for the <button id = "scene16Sandwhich">sandwich</button> or your <button id = "scene16Fave">favorite dish</button>?                    
+                </p>
+            </div>
+            <div id = "scene16v3" style="display: none;">
+                <p>
+                    You make your order and enjoy your lunchtime with your friend. While you feel a bit guilty making them spend money but you feel a little less lonely.
+                </p>
+                <p>
+                    You take the bus home and make yourself a quick meal for tomorrow. You think you should try to eat healthier, but vegetables at the supermarket are expensive. Maybe this weekend you should try to go to a market and buy some healthier food.                     
+                </p>
+                <p>
+                    After finishing up what you need to do for the day, <button class = "scene16Cont">you go to bed</button>.
+                </p>
+            </div>
+
+        </section>
+        <section id = "scene17" style="display: none;">
+            <h1>Day 17 Wednesday </h1>
+            <div id = "scene17v1">
+                <p>
+                    You're focusing on your work in class. The atmosphere feels a bit tense but you continue your work. You overhear your classmates discussing not being able to keep up with the course load and they fear they may be academically dismissed for bad grades.
+                </p>
+                <button id = "scene17v2">Continue</button>
+            </div>
+
+            <div id = "scene17v3" style="display: none;">
+                <p>
+                    After arriving home, you're still thinking about the classmate on academic probation. You think about what you would do if you were dropped from college. You hope to at least not get sick next month.              
+                </p>
+                <p>
+                    You calm yourself down so you can <button id = "scene17v4">go to sleep</button> early.
+                </p>                
+            </div>
+        </section>
+
+        <section id = "scene18" style="display: none;">
+            <h1>Day 18 Thursday </h1>
+            <p>
+                Today, you just have class. It goes by smoothly with no issues.
+            </p>
+            <p id = "">
+                You head home for the day and finish up some schoolwork. <button id = "scene18Cont">Continue</button>
+            </p>
+        </section>
+
+        <section id = "scene19" style="display: none;">
+            <h1>Day 19 Friday </h1>
+            <div id = "scene19Txt">
+                <p>
+                    Today you have work. You leave your apartment at the same time as usual to take a bus. For some reason, it has taken more time than usual to arrive. If you keep waiting, you'll be late to work. The alternative is taking an Uber, but you know that will cost you $15. 
+                </p>
+                <p>
+                    Would you rather wait for the <button id = "bus">bus</button> and arrive late or <button id = "ubertoWork">take an Uber for $15</button>?                    
+                </p>
+            </div>
+            <div id = "busTxt" style="display: none;">
+                <p>
+                    After waiting for several minutes, the bus finally came and you made it to work. You're 20 minutes late. Maybe it's not that much, but you feel that you could get fired for any reason or have your pay deducted. 
+                </p>
+                <p>
+                    You try to go unnoticed and quickly you get to your workspace to work focused until the <button class = "scene19Cont">end of the day</button>.
+                </p>
+            </div>
+            <p id = "uberTxt" style="display: none;">
+                You arrive at work on time and <button class = "scene19Cont">work goes smoothly</button>.
+            </p>
+        </section>
+
+        <section id = "scene20" style="display: none;">
+            <h1>Day 20 Saturday</h1>
+            <div id = "scene20Txt">
+                <p>
+                    After work you go to the super market. At the market, there are many fruits and veggies you'd like to buy, but you know that if you take too many they might spoil.
+                </p>
+                <p>
+                    You carry <span>$40 in total of groceries</span>. You'd like to buy some fruits too to have something sweet to eat at home, but that would make your groceries cost up to $55. Will you <button id = "buyFruit">buy fruits</button> or you will <button id = "getUsual">only get the usual</button>?
+                </p>                
+            </div>
+
+            <p id = "scene20V1" style="display: none;">
+                You arrive home with your groceries. You tidy up everything and <button id = "scene20Cont">end the day</button>.
+            </p>
+        </section>
+
+        <section id = "scene21" style="display: none;">
+            <h1>Day 21  Sunday </h1>
+            <div id = "scene21V1">
+                <img src = "images/chat.png" alt = "chat">
+                <p>
+                    You wake up because of a notification on your phone. It's a message from your group of friends. They're planning something for today and want to try a place that just opened near one of their houses. You don't know the place's prices, but taking into consideration the usual prices of restaurants, <span>you will be spending at least $12.00 plus your transportation needs</span>. Additionally, <span>you have a test tomorrow that is 15% of your grade</span>, and should probably focus on studying.
+                </p>
+                <p>
+                    What will you tell your friends? Will you <button id = "pizzaGo">go to the pizza place</button> or will you <button id = "pizzaDecline">tell them that you can't go</button>?
+                </p>
+            </div>
+
+            <div id = "scene21V4" style="display: none;">
+                <p>
+                    You arrive at the pizza place and you meet your friends. You’re glad you went out. Most of the time you've been eating the same dishes every day, so it feels good to eat something different.                     
+                </p>
+                <p>
+                    You try not to think about money and your test too much and enjoy the time spent with your friends. You finish eating and now it is time to head home.
+                </p>                   
+                <button id = "scene21Uber">Take Uber home</button>($15, 10-minute car ride)
+                <button id = "scene21Bus">Take the bus home</button>(Free, 45-minute bus ride)         
+            </div>
+
+            <div id = "scene21V2" style="display: none;">
+                <p>
+                    You tell your friends that you don't think you can go and thank them for the invitation anyway. Some minutes later, you get a private message from one of your friends.                     
+                </p>
+                <p>
+                    <span class = "phoneNotification">"Hey if it's because of money issues, I can pay for your bill. We would love to hang out with you again."</span>
+                </p>
+                <p>
+                    You're moved by his help, but you also feel a bit guilty and you would still need to figure out transportation.. You know your friend doesn't have that much money either. Will you <button id = "pizzaGo2">take the invitation</button> or would you rather <button id = "pizzaDecline2">stay at home</button>?         
+                </p>    
+            </div>
+
+            <p id = "scene21V3" style="display: none;">
+                Even with your friend's insistence, you choose not to go. You wonder if you're overreacting, but you never know if an emergency might occur and you might need the extra money. Besides, you could use this time to study. You try to convince yourself that you did the right thing and day.You 
+                <button class = "scene21Cont">study</button> for the rest of the day.
+            </p>
+
+            <p id = "scene21V5" style="display: none;">
+                You arrive home, you’re tired but you use the little time you have left to study for your test.
+                <button class = "scene21Cont">Continue</button>
+            </p>
+
+        </section>
+
+
+        <section id = "scene22" style="display: none;">
+            <h1>Day 22 Monday</h1>
+            <p id = "scene22V1" style="display: none;">
+                Today is the big test and you think you did well thanks to the studying you did last night.
+            </p>
+            <p id = "scene22V2" style="display: none;">
+                Today is the big test and you aren’t confident in how well you did but you did your best. Maybe you should’ve studied a bit more.
+            </p>
+            <p id = "scene22Rent">
+
+            </p>
+            <p>                
+                You get an email saying you have a pre-approved loan for $1250.000 that you could pay up to 12 months in easy $105 installments with an APR of 10%. You dream about all the things you could do if you requested that loan, but the idea of being in debt for that many months is scary.
+            </p>
+            <p>
+                You think about it some more as you <button id = "scene22Cont">go home to sleep</button>.  
+            </p>
+        </section>
+
+        <section id = "scene23" style="display: none;">
+            <h1>Day 23 Tuesday </h1>
+            <div id = "scene23Txt">
+                <p>
+                    It’s Wednesday and you're checking your phone. After reading your emails, you notice you just got a mail about your gas bill.
+                </p>
+                <p>
+                    <span class = "phoneNotification">“New Notification - Gas Bill Total to be paid: $22.00”</span>.
+                </p>
+                <p >
+                    The average gas bill in California is $31. Luckily this bill is cheaper than the electric or water ones. You decide to <button  id = "scene23Cont">pay immediately</button> to keep bills from piling up.
+                </p>
+            </div>
+
+            <p id = "electricNotPaid" style="display: none;"> 
+                You also get a reminder that your $90 electric bill you didn't pay at the beginning of the month is due. <button  id = "scene23ContElectric">You pay immediately.</button>
+            </p>
+        </section>
+        <section id = "scene24" style="display: none;">
+            <h1>Day 24 Wednesday </h1>
+            <p>
+                Tomorrow is the last day to pay your rent. While you browse your phone you remember that you haven't paid your <span>student debt</span> this month which is $200.
+
+            </p>
+            <p id = "scene24Txt">
+                Student loan debt in the United States surpassed $1.7 trillion in 2021, with approximately 45 million borrowers, according to the Federal Reserve and the Department of Education. In the United States, around 60% of undergraduate students graduate with some form of debt, according to data from the National Center for Education Statistics. The average student loan payment is between $200 and $299 per month.
+            </p>
+            <p>
+                In your head, you can hear the words that you were told during your teenage years: "If you study and get a college degree you WILL have a bright future!" You’re almost done with your college education and hope that this “bright future” will come to you soon...
+            </p>
+
+            <p>
+                You look back at your phone screen and make the transfer. <button id = "scene24Cont">You go to sleep</button>.       
+            </p>
+        </section>
+        <section id = "scene25" style="display: none;">
+            <h1>Day 25 Thursday</h1>
+            <div id = "scene25TxtEnough" style="display: none;">
+                <p> 
+                    Today is the last day you can pay your rent on time.
+                </p>
+                <p id = "scene25TxtEnough1">
+
+                </p>
+                <p>
+                    <button id = "payRent">Pay Rent</button>
+                </p>
+            </div>
+
+            <div id = "scene25TxtNotEnough" style="display: none;">
+                <p>
+                    Today is the last day you can pay your rent on time, and you don't want to have problems with the landlord who has given you the opportunity to rent this place for such a low cost. You know that it would be really easy for him to kick you out and find a new tenant.                    
+                </p>
+                <p id = "scene25TxtNotEnough">
+
+                </p>
+                <p>
+                    If you borrowed money from someone, you know you wouldn't be able to pay it back next month in full. The other solution seems to be to take the pre-approved loan of $1250.00, but you'll have to spend the next 12 months paying it back in Installments.
+                </p>
+                <p> 
+                    You think about it a little since it's either taking the loan or try to convince your landlord you'll pay rent at the end of the month, there's a <span>high chance</span> you risk losing your apartment...
+                </p>
+                <button id = "takeloan">Take the loan.</button>
+                <button id = "waitforpaycheck">Convince your landlord you will pay rent at the end of the month.</button>
+            </div>
+
+            <div id = "scene25LessThanHalf" style="display: none;">
+                <p>
+                    You try and reason with your landlord. You tried to offer what you had left in your bank account. While he seemed empathetic, he expresses how he can no longer accept anymore late payments.
+                </p>
+                <button id = "takeloan2">Take the loan and pay rent in full.</button>
+                <button class = "scene25Cont">Continue</button>
+            </div>
+
+
+            <div id = "scene25MoreThanHalf" style="display: none;">
+                <p>
+                    You try and reason with your landlord. You had enough to cover a majority of rent and you will give him the rest at the end of the month. He sighs feeling empathetic and accepts your proposal. He gives you a final warning that he wouldn't be so nice next time. You're just happy you were able to make ends meet.
+                </p>   
+                <button class = "scene25Cont">Continue</button>            
+            </div>
+
+
+
+            <div id = "TaketheLoan" style="display: none;">
+                <p id = "TaketheLoanTxt">
+
+                </p>
+                <p>
+                    Although you will temporarily have a little more money in your account, that money is debt disguised as savings. When you finish paying off that loan, you'll have given more than $1000.00 to the bank, and let's not forget the student loans you’re already paying off.
+                </p>
+                <p>
+                    But you've already borrowed it. You may be able to take another loan to pay for the first one... 
+                </p>
+                <p>
+                    You decide to go to bed so you don't have to think about it. At least you still have your little apartment and you haven't lost faith that someday you’ll be debt and worry-free.
+                </p>
+                <button class = "scene25Cont">Continue</button>
+            </div>
+
+        </section>
+
+        <section id = "results" style="display: none;">
+            <p  id = "resultsTxt">
+
+            </p>
+        </section>
+    </main>
+
+    <script type="module">
+        import {
+          computePosition,
+          flip,
+          shift,
+          offset,
+          arrow,
+        } from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5/+esm';
+  
+        const MoneyCount = document.querySelector('#MoneyCount');
+        const HealthCount = document.querySelector('#HealthCount');
+        const GradesCount = document.querySelector('#GradesCount');
+        const dataBarINFO = document.querySelector('#dataBarINFO');
+        const dataHealthINFO = document.querySelector('#dataHealthINFO');
+        const dataGradesINFO = document.querySelector('#dataGradesINFO');
+        const arrowElement = document.querySelector('#arrow');
+        const healthArrowElement = document.querySelector('#healthArrow');
+        const gradesArrowElement = document.querySelector('#gradesArrow');
+  
+        function updateTooltip(target, tooltip, arrowEl) {
+          computePosition(target, tooltip, {
+            placement: 'top',
+            middleware: [
+              offset(6),
+              flip(),
+              shift({padding: 5}),
+              arrow({element: arrowEl}),
+            ],
+          }).then(({x, y, placement, middlewareData}) => {
+            Object.assign(tooltip.style, {
+              left: `${x}px`,
+              top: `${y}px`,
+            });
+  
+            const {x: arrowX, y: arrowY} = middlewareData.arrow;
+  
+            const staticSide = {
+              top: 'bottom',
+              right: 'left',
+              bottom: 'top',
+              left: 'right',
+            }[placement.split('-')[0]];
+  
+            Object.assign(arrowEl.style, {
+              left: arrowX != null ? `${arrowX}px` : '',
+              top: arrowY != null ? `${arrowY}px` : '',
+              right: '',
+              bottom: '',
+              [staticSide]: '-4px',
+            });
+          });
+        }
+  
+        function showTooltip(tooltip) {
+          tooltip.style.display = 'block';
+        }
+        
+        function hideTooltip(tooltip) {
+          tooltip.style.display = 'none';
+        }
+  
+        [
+          [MoneyCount, dataBarINFO, arrowElement],
+          [HealthCount, dataHealthINFO, healthArrowElement],
+          [GradesCount, dataGradesINFO, gradesArrowElement]
+        ].forEach(([target, tooltip, arrowEl]) => {
+          target.addEventListener('mouseenter', () => { showTooltip(tooltip); updateTooltip(target, tooltip, arrowEl); });
+          target.addEventListener('mouseleave', () => hideTooltip(tooltip));
+          target.addEventListener('focus', () => { showTooltip(tooltip); updateTooltip(target, tooltip, arrowEl); });
+          target.addEventListener('blur', () => hideTooltip(tooltip));
+        });
+  
+      </script>
+</body>
+</html>

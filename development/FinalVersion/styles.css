@@ -1,0 +1,141 @@
+body {
+    background-color: #030102;
+    color: #ffffff;
+}
+
+
+Main {
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+main {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span {
+    color: #e96ba8;
+    font-weight: 900;
+}
+
+#MoneyCount, #HealthCount, #GradesCount {
+    cursor: pointer;
+}
+
+h1 {
+    color: #ffc0ad;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+p{
+    line-height: 1.5;
+}
+
+#dataBarStyle {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: #1f0b15;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+.phoneNotification {
+    font-style: italic;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #e96ba8;
+    font-weight: 900;
+    border: none;
+    color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+
+    transition: transform .2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+#dataBarINFO, #dataHealthINFO, #dataGradesINFO {
+    display: none;
+    width: max-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #222;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+#arrow, #healthArrow, #gradesArrow {
+    position: absolute;
+    background: #222;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+}
+
+.section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 1s;
+}
+
+.section.shown {
+    opacity: 1;
+    visibility: visible;
+}
+
+#char1, #char2 {
+    transition: transform .4s ease-in-out; /* Smooth scaling effect */
+}
+
+#char1:hover, #char2:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#charPick {
+    display: flex; flex-direction: row; justify-content: space-around;
+}
+
+#beginMain {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20%;
+}
+
+#beginContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
