@@ -1,5 +1,6 @@
 (function(){
     'use strict'
+    AOS.init();
     let money = 1440;
     let happiness = 80;
     let grades = 80;
