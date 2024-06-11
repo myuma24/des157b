@@ -177,8 +177,8 @@ button:hover {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Adjust the gap between grid items */
-    padding: 20px; /* Optional: Adds some space around the grid */
+    gap: 20px;
+    padding: 20px;
     margin: auto;
     font-size: 14px;
     font-family: "Lato", sans-serif;
